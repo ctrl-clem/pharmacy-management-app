@@ -1,0 +1,135 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Reteta.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Reteta.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Reteta.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Reteta.h"
+        -:    2:#include "Repository.h"
+        -:    3:#include <algorithm>
+        -:    4:#include <random>
+        -:    5:using std::shuffle;
+        -:    6:
+function _ZN6Reteta19addMedicamentRetetaERK10Medicament called 7 returned 86% blocks executed 70%
+        7:    7:void Reteta::addMedicamentReteta(const Medicament& m) {
+       10:    8:    for(const auto& med: medicamenteReteta)
+        7:    8-block  0
+call    0 returned 7
+call    1 returned 7
+        4:    8-block  1
+call    2 returned 4
+        3:    8-block  2
+call    3 returned 3
+       10:    8-block  3
+call    4 returned 10
+branch  5 taken 4
+branch  6 taken 6 (fallthrough)
+        -:    9:    {
+        4:   10:        if(med.getNume()==m.getNume())
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   10-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   10-block  1
+call    6 returned 4
+call    7 returned 4
+call    8 returned 4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 3
+    $$$$$:   10-block  2
+    $$$$$:   10-block  3
+call   11 never executed
+    $$$$$:   10-block  4
+        -:   11:        {
+        3:   12:            throw MyException("Acest medicament exista deja in reteta!");            return;
+        1:   12-block  0
+call    0 returned 1
+        1:   12-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+call    7 never executed
+        -:   13:        }
+        -:   14:    }
+        -:   15:
+        6:   16:    medicamenteReteta.push_back(m);
+        6:   16-block  0
+call    0 returned 6
+        -:   17:
+        -:   18:}
+        -:   19:
+function _ZN6Reteta12deleteRetetaEv called 3 returned 100% blocks executed 100%
+        3:   20:void Reteta::deleteReteta() {
+        -:   21:
+        3:   22:    medicamenteReteta.clear();
+        3:   22-block  0
+call    0 returned 3
+        -:   23:
+        3:   24:}
+        -:   25:
+function _ZN6Reteta14generateRandomEiSt6vectorI10MedicamentSaIS1_EE called 2 returned 100% blocks executed 88%
+        2:   26:void Reteta::generateRandom(int numar, vector<Medicament> m) {
+        -:   27:
+        2:   28:    deleteReteta();
+        2:   28-block  0
+call    0 returned 2
+        2:   29:    shuffle(m.begin(),m.end(),std::default_random_engine(std::random_device{}()));
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   29-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   29-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   29-block  2
+call    9 returned 2
+call   10 returned 2
+call   11 returned 2
+branch 12 taken 2 (fallthrough)
+branch 13 taken 0 (throw)
+        2:   29-block  3
+call   14 returned 2
+    $$$$$:   29-block  4
+call   15 never executed
+    $$$$$:   29-block  5
+       11:   30:    for(int i=0; i<numar && !m.empty(); i++)
+       11:   30-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 1
+       10:   30-block  1
+call    2 returned 10
+branch  3 taken 9 (fallthrough)
+branch  4 taken 1
+        9:   30-block  2
+        2:   30-block  3
+       11:   30-block  4
+branch  5 taken 9
+branch  6 taken 2 (fallthrough)
+        -:   31:    {
+        9:   32:        medicamenteReteta.push_back(m.back());
+        9:   32-block  0
+call    0 returned 9
+call    1 returned 9
+        9:   33:        m.pop_back();
+call    0 returned 9
+        -:   34:    }
+        2:   35:}
+        2:   35-block  0
+        -:   36:
+function _ZNK6Reteta12getAllRetetaEv called 8 returned 100% blocks executed 100%
+        8:   37:const vector<Medicament> &Reteta::getAllReteta() const {
+        8:   38:    return medicamenteReteta;
+        8:   38-block  0
+        -:   39:}

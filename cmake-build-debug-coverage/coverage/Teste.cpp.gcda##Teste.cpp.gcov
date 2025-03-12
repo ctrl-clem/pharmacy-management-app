@@ -1,0 +1,4782 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Teste.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Teste.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Teste.h"
+        -:    2:#include <cassert>
+        -:    3:#include <fstream>
+        -:    4:
+function _Z7testAllv called 1 returned 100% blocks executed 100%
+        1:    5:void testAll()
+        -:    6:{
+        1:    7:    testAddRepo();
+        1:    7-block  0
+call    0 returned 1
+        1:    8:    testAddService();
+call    0 returned 1
+        1:    9:    testDelete();
+call    0 returned 1
+        1:   10:    testCauta();
+call    0 returned 1
+        1:   11:    testModifica();
+call    0 returned 1
+        1:   12:    testValidator();
+call    0 returned 1
+        1:   13:    testFilter();
+call    0 returned 1
+        1:   14:    testSort();
+call    0 returned 1
+        1:   15:    testAddReteta();
+call    0 returned 1
+        1:   16:    testDeleteReteta();
+call    0 returned 1
+        1:   17:    testGenerateRandom();
+call    0 returned 1
+        1:   18:    testFileRepo();
+call    0 returned 1
+        1:   19:    testUndo();
+call    0 returned 1
+        1:   20:    testExport();
+call    0 returned 1
+        1:   21:    testCalculeaza();
+call    0 returned 1
+        1:   22:}
+        -:   23:
+function _Z11testAddRepov called 1 returned 100% blocks executed 61%
+        1:   24:void testAddRepo()
+        -:   25:{
+        1:   26:    Repo repository;
+        1:   26-block  0
+call    0 returned 1
+        5:   27:    Medicament m{"nurofen",12,"prod","ibuprofen"};
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   27-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   27-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+call   13 never executed
+    $$$$$:   27-block  7
+    $$$$$:   27-block  8
+    $$$$$:   27-block  9
+call   14 never executed
+    $$$$$:   27-block 10
+    $$$$$:   27-block 11
+        1:   28:    repository.addMed(m);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   29:    assert(repository.getAll().size() == 1);
+        1:   29-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   29-block  1
+call    4 never executed
+        1:   29-block  2
+       1*:   30:    assert(repository.getAll()[0].getNume() == "nurofen");
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   30-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   30-block  2
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   30-block  3
+call   10 never executed
+        1:   30-block  4
+        1:   30-block  5
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0
+        1:   30-block  6
+call   13 returned 1
+    $$$$$:   30-block  7
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:   30-block  8
+call   16 never executed
+    $$$$$:   30-block  9
+       1*:   31:    assert(repository.getAll()[0].getPret() == 12);
+        1:   31-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   31-block  1
+call    5 never executed
+        1:   31-block  2
+       1*:   32:    assert(repository.getAll()[0].getProducator() == "prod");
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   32-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   32-block  2
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   32-block  3
+call   10 never executed
+        1:   32-block  4
+        1:   32-block  5
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0
+        1:   32-block  6
+call   13 returned 1
+    $$$$$:   32-block  7
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:   32-block  8
+call   16 never executed
+    $$$$$:   32-block  9
+       1*:   33:    assert(repository.getAll()[0].getSubstanta() == "ibuprofen");
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   33-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   33-block  2
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   33-block  3
+call   10 never executed
+        1:   33-block  4
+        1:   33-block  5
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0
+        1:   33-block  6
+call   13 returned 1
+    $$$$$:   33-block  7
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:   33-block  8
+call   16 never executed
+    $$$$$:   33-block  9
+        -:   34:
+        -:   35:    try{
+        1:   36:        repository.addMed(m);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   37:    }
+        1:   38:    catch(MyException& ex){
+        1:   38-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   38-block  1
+call    2 returned 1
+        -:   39:        assert(true);
+        1:   40:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   41:
+        1:   42:}
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   42-block  1
+call    2 never executed
+    $$$$$:   42-block  2
+call    3 never executed
+        -:   43:
+function _Z14testAddServicev called 1 returned 100% blocks executed 59%
+        1:   44:void testAddService()
+        -:   45:{
+        1:   46:    Repo repo;
+        1:   46-block  0
+call    0 returned 1
+        -:   47:    Validator validator;
+        1:   48:    Service service{repo,validator};
+call    0 returned 1
+        6:   49:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   49-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   49-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   49-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   49-block  5
+call   15 never executed
+    $$$$$:   49-block  6
+    $$$$$:   49-block  7
+    $$$$$:   49-block  8
+call   16 never executed
+    $$$$$:   49-block  9
+    $$$$$:   49-block 10
+    $$$$$:   49-block 11
+call   17 never executed
+    $$$$$:   49-block 12
+    $$$$$:   49-block 13
+        5:   50:    service.add("nume",13,"skdjfn","ksjfn");
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   50-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   50-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   50-block  5
+call   15 never executed
+    $$$$$:   50-block  6
+    $$$$$:   50-block  7
+    $$$$$:   50-block  8
+call   16 never executed
+    $$$$$:   50-block  9
+    $$$$$:   50-block 10
+    $$$$$:   50-block 11
+call   17 never executed
+    $$$$$:   50-block 12
+    $$$$$:   50-block 13
+       1*:   51:    assert(service.getAll().size() == 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   51-block  1
+call    6 never executed
+        1:   51-block  2
+        -:   52:    try
+        -:   53:    {
+       6*:   54:        service.add("nurofen",12,"ceva","ibruprofen");
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   54-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   54-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:   54-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:   54-block  5
+call   15 returned 1
+        1:   54-block  6
+        1:   54-block  7
+        1:   54-block  8
+call   16 returned 1
+        1:   54-block  9
+        1:   54-block 10
+        1:   54-block 11
+call   17 returned 1
+        1:   54-block 12
+        1:   54-block 13
+        -:   55:    }
+        1:   56:    catch(MyException& ex){
+        1:   56-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   56-block  1
+call    2 returned 1
+        1:   57:        assert(ex.getMesaj() == "Medicament deja existent!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   57-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   57-block  2
+call    8 never executed
+        1:   57-block  3
+        1:   57-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   57-block  5
+call   11 returned 1
+    $$$$$:   57-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   57-block  7
+call   14 never executed
+    $$$$$:   57-block  8
+        1:   58:    }
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   58-block  1
+call    3 never executed
+        1:   59:}
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   59-block  1
+call    2 never executed
+    $$$$$:   59-block  2
+call    3 never executed
+        -:   60:
+function _Z10testDeletev called 1 returned 100% blocks executed 54%
+        1:   61:void testDelete()
+        -:   62:{
+        1:   63:    Repo repo;
+        1:   63-block  0
+call    0 returned 1
+        -:   64:    Validator validator;
+        1:   65:    Service service{repo,validator};
+call    0 returned 1
+        6:   66:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   66-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   66-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   66-block  5
+call   15 never executed
+    $$$$$:   66-block  6
+    $$$$$:   66-block  7
+    $$$$$:   66-block  8
+call   16 never executed
+    $$$$$:   66-block  9
+    $$$$$:   66-block 10
+    $$$$$:   66-block 11
+call   17 never executed
+    $$$$$:   66-block 12
+    $$$$$:   66-block 13
+        6:   67:    service.add("nume",13,"skdjfn","ksjfn");
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   67-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   67-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   67-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   67-block  5
+call   15 never executed
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+    $$$$$:   67-block  8
+call   16 never executed
+    $$$$$:   67-block  9
+    $$$$$:   67-block 10
+    $$$$$:   67-block 11
+call   17 never executed
+    $$$$$:   67-block 12
+    $$$$$:   67-block 13
+        -:   68:
+        1:   69:    service.deleteMed("nurofen");
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   69-block  2
+call    6 returned 1
+    $$$$$:   69-block  3
+call    7 never executed
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+       1*:   70:    assert(service.getAll().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   70-block  1
+call    6 never executed
+        1:   70-block  2
+        -:   71:    try{
+       2*:   72:        service.deleteMed("sgsh");
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   72-block  2
+call    6 never executed
+        1:   72-block  3
+call    7 returned 1
+        1:   72-block  4
+        1:   72-block  5
+    #####:   73:        assert(false);
+call    0 never executed
+        -:   74:    }
+        1:   75:    catch(MyException& ex){
+        1:   75-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   75-block  1
+call    2 returned 1
+        -:   76:        //cout<<ex.getMesaj();
+        1:   77:        assert(ex.getMesaj() == "Acest medicament nu exista!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   77-block  2
+call    8 never executed
+        1:   77-block  3
+        1:   77-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   77-block  5
+call   11 returned 1
+    $$$$$:   77-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   77-block  7
+call   14 never executed
+    $$$$$:   77-block  8
+        1:   78:    }
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   78-block  1
+call    3 never executed
+        1:   79:}
+        1:   79-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   79-block  1
+call    2 never executed
+    $$$$$:   79-block  2
+call    3 never executed
+        -:   80:
+function _Z9testCautav called 1 returned 100% blocks executed 53%
+        1:   81:void testCauta()
+        -:   82:{
+        1:   83:    Repo repo;
+        1:   83-block  0
+call    0 returned 1
+        -:   84:    Validator validator;
+        1:   85:    Service service{repo,validator};
+call    0 returned 1
+        6:   86:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   86-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   86-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   86-block  5
+call   15 never executed
+    $$$$$:   86-block  6
+    $$$$$:   86-block  7
+    $$$$$:   86-block  8
+call   16 never executed
+    $$$$$:   86-block  9
+    $$$$$:   86-block 10
+    $$$$$:   86-block 11
+call   17 never executed
+    $$$$$:   86-block 12
+    $$$$$:   86-block 13
+        6:   87:    service.add("nume",13,"skdjfn","ksjfn");
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   87-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   87-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   87-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   87-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   87-block  5
+call   15 never executed
+    $$$$$:   87-block  6
+    $$$$$:   87-block  7
+    $$$$$:   87-block  8
+call   16 never executed
+    $$$$$:   87-block  9
+    $$$$$:   87-block 10
+    $$$$$:   87-block 11
+call   17 never executed
+    $$$$$:   87-block 12
+    $$$$$:   87-block 13
+        -:   88:
+        1:   89:    Medicament m = service.cauta("nurofen");
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   89-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   89-block  3
+call    9 returned 1
+    $$$$$:   89-block  4
+call   10 never executed
+    $$$$$:   89-block  5
+    $$$$$:   89-block  6
+        -:   90:
+       1*:   91:    assert(m.getNume() == "nurofen");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   91-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   91-block  2
+call    8 never executed
+        1:   91-block  3
+        1:   91-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   91-block  5
+call   11 returned 1
+    $$$$$:   91-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   91-block  7
+call   14 never executed
+    $$$$$:   91-block  8
+       1*:   92:    assert(m.getSubstanta() == "ibruprofen");
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   92-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   92-block  3
+call    8 never executed
+        1:   92-block  4
+        1:   92-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   92-block  6
+call   11 returned 1
+    $$$$$:   92-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   92-block  8
+call   14 never executed
+    $$$$$:   92-block  9
+       1*:   93:    assert(m.getProducator() == "ceva");
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   93-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   93-block  3
+call    8 never executed
+        1:   93-block  4
+        1:   93-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   93-block  6
+call   11 returned 1
+    $$$$$:   93-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   93-block  8
+call   14 never executed
+    $$$$$:   93-block  9
+       1*:   94:    assert(m.getPret() == 12);
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   94-block  1
+call    3 never executed
+        1:   94-block  2
+        -:   95:
+        -:   96:    try{
+       2*:   97:        service.cauta("aaaa");
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   97-block  2
+call    6 never executed
+        1:   97-block  3
+call    7 returned 1
+        1:   97-block  4
+        1:   97-block  5
+        -:   98:    }
+        1:   99:    catch(MyException &str){
+        1:   99-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   99-block  1
+call    2 returned 1
+        1:  100:        assert(str.getMesaj() == "Acest medicament nu exista!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  100-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  100-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  100-block  2
+call    8 never executed
+        1:  100-block  3
+        1:  100-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  100-block  5
+call   11 returned 1
+    $$$$$:  100-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  100-block  7
+call   14 never executed
+    $$$$$:  100-block  8
+        1:  101:    }
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  101-block  1
+call    3 never executed
+        1:  102:}
+        1:  102-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  102-block  1
+call    3 never executed
+    $$$$$:  102-block  2
+call    4 never executed
+    $$$$$:  102-block  3
+call    5 never executed
+        -:  103:
+function _Z12testModificav called 1 returned 100% blocks executed 61%
+        1:  104:void testModifica()
+        -:  105:{
+        1:  106:    Repo repo;
+        1:  106-block  0
+call    0 returned 1
+        -:  107:    Validator validator;
+        1:  108:    Service service{repo,validator};
+call    0 returned 1
+        6:  109:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  109-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  109-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  109-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  109-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  109-block  5
+call   15 never executed
+    $$$$$:  109-block  6
+    $$$$$:  109-block  7
+    $$$$$:  109-block  8
+call   16 never executed
+    $$$$$:  109-block  9
+    $$$$$:  109-block 10
+    $$$$$:  109-block 11
+call   17 never executed
+    $$$$$:  109-block 12
+    $$$$$:  109-block 13
+        6:  110:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  110-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  110-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  110-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  110-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  110-block  5
+call   15 never executed
+    $$$$$:  110-block  6
+    $$$$$:  110-block  7
+    $$$$$:  110-block  8
+call   16 never executed
+    $$$$$:  110-block  9
+    $$$$$:  110-block 10
+    $$$$$:  110-block 11
+call   17 never executed
+    $$$$$:  110-block 12
+    $$$$$:  110-block 13
+        -:  111:
+        5:  112:    service.modifica("nurofen",13,"altceva","ibuprofen");
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  112-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  112-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  112-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  112-block  5
+call   15 never executed
+    $$$$$:  112-block  6
+    $$$$$:  112-block  7
+    $$$$$:  112-block  8
+call   16 never executed
+    $$$$$:  112-block  9
+    $$$$$:  112-block 10
+    $$$$$:  112-block 11
+call   17 never executed
+    $$$$$:  112-block 12
+    $$$$$:  112-block 13
+        -:  113:
+       1*:  114:    assert(service.getAll().size() == 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  114-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  114-block  1
+call    6 never executed
+        1:  114-block  2
+       1*:  115:    assert(service.getAll()[1].getNume() == "nurofen");
+        1:  115-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  115-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  115-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  115-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  115-block  4
+call   12 never executed
+        1:  115-block  5
+        1:  115-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  115-block  7
+call   15 returned 1
+    $$$$$:  115-block  8
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:  115-block  9
+call   18 never executed
+    $$$$$:  115-block 10
+       1*:  116:    assert(service.getAll()[1].getPret() == 13);
+        1:  116-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  116-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  116-block  2
+call    7 never executed
+        1:  116-block  3
+       1*:  117:    assert(service.getAll()[1].getProducator() == "altceva");
+        1:  117-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  117-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  117-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  117-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  117-block  4
+call   12 never executed
+        1:  117-block  5
+        1:  117-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  117-block  7
+call   15 returned 1
+    $$$$$:  117-block  8
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:  117-block  9
+call   18 never executed
+    $$$$$:  117-block 10
+       1*:  118:    assert(service.getAll()[1].getSubstanta() == "ibuprofen");
+        1:  118-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  118-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  118-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  118-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  118-block  4
+call   12 never executed
+        1:  118-block  5
+        1:  118-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  118-block  7
+call   15 returned 1
+        1:  118-block  8
+    $$$$$:  118-block  9
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:  118-block 10
+call   18 never executed
+    $$$$$:  118-block 11
+        -:  119:
+        -:  120:    try{
+       6*:  121:        service.modifica("nu exista",45,"skdjfn","sfjn");
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  121-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  121-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  121-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  121-block  5
+call   15 returned 1
+        1:  121-block  6
+        1:  121-block  7
+        1:  121-block  8
+call   16 returned 1
+        1:  121-block  9
+        1:  121-block 10
+        1:  121-block 11
+call   17 returned 1
+        1:  121-block 12
+        1:  121-block 13
+        -:  122:    }
+        1:  123:    catch(MyException& str){
+        1:  123-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  123-block  1
+call    2 returned 1
+        1:  124:        assert(str.getMesaj() == "Acest medicament nu exista!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  124-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  124-block  2
+call    8 never executed
+        1:  124-block  3
+        1:  124-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  124-block  5
+call   11 returned 1
+    $$$$$:  124-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  124-block  7
+call   14 never executed
+    $$$$$:  124-block  8
+        1:  125:    }
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  125-block  1
+call    3 never executed
+        -:  126:
+        -:  127:    try{
+       6*:  128:        service.modifica("nurofen",-1,"s","k");
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  128-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  128-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  128-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  128-block  5
+call   15 returned 1
+        1:  128-block  6
+        1:  128-block  7
+        1:  128-block  8
+call   16 returned 1
+        1:  128-block  9
+        1:  128-block 10
+        1:  128-block 11
+call   17 returned 1
+        1:  128-block 12
+        1:  128-block 13
+        -:  129:    }
+        1:  130:    catch(ValidationException& ex){
+        1:  130-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  130-block  1
+call    2 returned 1
+        1:  131:        assert(ex.getMesaj() == "Substanta trebuie sa aiba cel putin 2 caractere!\nProducatorul trebuie sa aiba cel putin 2 caractere!\nPretul nu poate fi mai mic decat 1!\n" );
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  131-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  131-block  2
+call    8 never executed
+        1:  131-block  3
+        1:  131-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  131-block  5
+call   11 returned 1
+    $$$$$:  131-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  131-block  7
+call   14 never executed
+    $$$$$:  131-block  8
+        1:  132:    }
+        1:  132-block  0
+call    0 returned 1
+    $$$$$:  132-block  1
+call    1 never executed
+        1:  133:}
+        1:  133-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  133-block  1
+call    2 never executed
+    $$$$$:  133-block  2
+call    3 never executed
+        -:  134:
+function _Z13testValidatorv called 1 returned 100% blocks executed 62%
+        1:  135:void testValidator()
+        -:  136:{
+        1:  137:    Repo repo;
+        1:  137-block  0
+call    0 returned 1
+        -:  138:    Validator validator;
+        1:  139:    Service service{repo,validator};
+call    0 returned 1
+        6:  140:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  140-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  140-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  140-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  140-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  140-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  140-block  5
+call   15 never executed
+    $$$$$:  140-block  6
+    $$$$$:  140-block  7
+    $$$$$:  140-block  8
+call   16 never executed
+    $$$$$:  140-block  9
+    $$$$$:  140-block 10
+    $$$$$:  140-block 11
+call   17 never executed
+    $$$$$:  140-block 12
+    $$$$$:  140-block 13
+        6:  141:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  141-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  141-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  141-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  141-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  141-block  5
+call   15 never executed
+    $$$$$:  141-block  6
+    $$$$$:  141-block  7
+    $$$$$:  141-block  8
+call   16 never executed
+    $$$$$:  141-block  9
+    $$$$$:  141-block 10
+    $$$$$:  141-block 11
+call   17 never executed
+    $$$$$:  141-block 12
+    $$$$$:  141-block 13
+        -:  142:    try{
+       6*:  143:        service.add("a",-1,"s","d");
+        1:  143-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  143-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  143-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  143-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  143-block  5
+call   15 returned 1
+        1:  143-block  6
+        1:  143-block  7
+        1:  143-block  8
+call   16 returned 1
+        1:  143-block  9
+        1:  143-block 10
+        1:  143-block 11
+call   17 returned 1
+        1:  143-block 12
+        1:  143-block 13
+        -:  144:    }
+        1:  145:    catch(ValidationException& ex){
+        1:  145-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  145-block  1
+call    2 returned 1
+        1:  146:        assert(ex.getMesaj() == "Titlul trebuie sa aiba cel putin 2 caractere!\nSubstanta trebuie sa aiba cel putin 2 caractere!\nProducatorul trebuie sa aiba cel putin 2 caractere!\nPretul nu poate fi mai mic decat 1!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  146-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  146-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  146-block  2
+call    8 never executed
+        1:  146-block  3
+        1:  146-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  146-block  5
+call   11 returned 1
+    $$$$$:  146-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  146-block  7
+call   14 never executed
+    $$$$$:  146-block  8
+        1:  147:    }
+        1:  147-block  0
+call    0 returned 1
+    $$$$$:  147-block  1
+call    1 never executed
+        -:  148:
+        -:  149:    try{
+       6*:  150:        service.add("a",1,"kdfj","ksfjg");
+        1:  150-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  150-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  150-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  150-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  150-block  5
+call   15 returned 1
+        1:  150-block  6
+        1:  150-block  7
+        1:  150-block  8
+call   16 returned 1
+        1:  150-block  9
+        1:  150-block 10
+        1:  150-block 11
+call   17 returned 1
+        1:  150-block 12
+        1:  150-block 13
+        -:  151:    }
+        1:  152:    catch(ValidationException& ex){
+        1:  152-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  152-block  1
+call    2 returned 1
+        1:  153:        assert(ex.getMesaj() == "Titlul trebuie sa aiba cel putin 2 caractere!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  153-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  153-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  153-block  2
+call    8 never executed
+        1:  153-block  3
+        1:  153-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  153-block  5
+call   11 returned 1
+    $$$$$:  153-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  153-block  7
+call   14 never executed
+    $$$$$:  153-block  8
+        1:  154:    }
+        1:  154-block  0
+call    0 returned 1
+    $$$$$:  154-block  1
+call    1 never executed
+        1:  155:}
+        1:  155-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  155-block  1
+call    2 never executed
+    $$$$$:  155-block  2
+call    3 never executed
+        -:  156:
+function _Z10testFilterv called 1 returned 100% blocks executed 49%
+        1:  157:void testFilter()
+        -:  158:{
+        1:  159:    Repo repo;
+        1:  159-block  0
+call    0 returned 1
+        -:  160:    Validator validator;
+        1:  161:    Service service{repo,validator};
+call    0 returned 1
+        6:  162:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  162-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  162-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  162-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  162-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  162-block  5
+call   15 never executed
+    $$$$$:  162-block  6
+    $$$$$:  162-block  7
+    $$$$$:  162-block  8
+call   16 never executed
+    $$$$$:  162-block  9
+    $$$$$:  162-block 10
+    $$$$$:  162-block 11
+call   17 never executed
+    $$$$$:  162-block 12
+    $$$$$:  162-block 13
+        6:  163:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  163-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  163-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  163-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  163-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  163-block  5
+call   15 never executed
+    $$$$$:  163-block  6
+    $$$$$:  163-block  7
+    $$$$$:  163-block  8
+call   16 never executed
+    $$$$$:  163-block  9
+    $$$$$:  163-block 10
+    $$$$$:  163-block 11
+call   17 never executed
+    $$$$$:  163-block 12
+    $$$$$:  163-block 13
+        6:  164:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  164-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  164-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  164-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  164-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  164-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  164-block  5
+call   15 never executed
+    $$$$$:  164-block  6
+    $$$$$:  164-block  7
+    $$$$$:  164-block  8
+call   16 never executed
+    $$$$$:  164-block  9
+    $$$$$:  164-block 10
+    $$$$$:  164-block 11
+call   17 never executed
+    $$$$$:  164-block 12
+    $$$$$:  164-block 13
+        6:  165:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  165-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  165-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  165-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  165-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  165-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  165-block  5
+call   15 never executed
+    $$$$$:  165-block  6
+    $$$$$:  165-block  7
+    $$$$$:  165-block  8
+call   16 never executed
+    $$$$$:  165-block  9
+    $$$$$:  165-block 10
+    $$$$$:  165-block 11
+call   17 never executed
+    $$$$$:  165-block 12
+    $$$$$:  165-block 13
+        -:  166:
+        -:  167:
+        1:  168:    vector<Medicament> m= service.filtrareSubstanta("ibruprofen");
+        1:  168-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  168-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  168-block  2
+call    6 returned 1
+    $$$$$:  168-block  3
+call    7 never executed
+    $$$$$:  168-block  4
+    $$$$$:  168-block  5
+       1*:  169:    assert(m.size()==2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  169-block  0
+call    3 never executed
+        1:  169-block  1
+       1*:  170:    assert(service.filtrarePret(100).size()==2);
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  170-block  2
+call    6 never executed
+        1:  170-block  3
+        1:  170-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  170-block  5
+call    9 returned 1
+    $$$$$:  170-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:  170-block  7
+call   12 never executed
+    $$$$$:  170-block  8
+        1:  171:}
+        1:  171-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  171-block  1
+call    3 never executed
+    $$$$$:  171-block  2
+call    4 never executed
+    $$$$$:  171-block  3
+call    5 never executed
+        -:  172:
+function _Z8testSortv called 1 returned 100% blocks executed 50%
+        1:  173:void testSort()
+        -:  174:{
+        1:  175:    Repo repo;
+        1:  175-block  0
+call    0 returned 1
+        -:  176:    Validator validator;
+        1:  177:    Service service{repo,validator};
+call    0 returned 1
+        6:  178:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  178-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  178-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  178-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  178-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  178-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  178-block  5
+call   15 never executed
+    $$$$$:  178-block  6
+    $$$$$:  178-block  7
+    $$$$$:  178-block  8
+call   16 never executed
+    $$$$$:  178-block  9
+    $$$$$:  178-block 10
+    $$$$$:  178-block 11
+call   17 never executed
+    $$$$$:  178-block 12
+    $$$$$:  178-block 13
+        6:  179:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  179-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  179-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  179-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  179-block  5
+call   15 never executed
+    $$$$$:  179-block  6
+    $$$$$:  179-block  7
+    $$$$$:  179-block  8
+call   16 never executed
+    $$$$$:  179-block  9
+    $$$$$:  179-block 10
+    $$$$$:  179-block 11
+call   17 never executed
+    $$$$$:  179-block 12
+    $$$$$:  179-block 13
+        6:  180:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  180-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  180-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  180-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  180-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  180-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  180-block  5
+call   15 never executed
+    $$$$$:  180-block  6
+    $$$$$:  180-block  7
+    $$$$$:  180-block  8
+call   16 never executed
+    $$$$$:  180-block  9
+    $$$$$:  180-block 10
+    $$$$$:  180-block 11
+call   17 never executed
+    $$$$$:  180-block 12
+    $$$$$:  180-block 13
+        6:  181:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  181-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  181-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  181-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  181-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  181-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  181-block  5
+call   15 never executed
+    $$$$$:  181-block  6
+    $$$$$:  181-block  7
+    $$$$$:  181-block  8
+call   16 never executed
+    $$$$$:  181-block  9
+    $$$$$:  181-block 10
+    $$$$$:  181-block 11
+call   17 never executed
+    $$$$$:  181-block 12
+    $$$$$:  181-block 13
+        6:  182:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  182-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  182-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  182-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  182-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  182-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  182-block  5
+call   15 never executed
+    $$$$$:  182-block  6
+    $$$$$:  182-block  7
+    $$$$$:  182-block  8
+call   16 never executed
+    $$$$$:  182-block  9
+    $$$$$:  182-block 10
+    $$$$$:  182-block 11
+call   17 never executed
+    $$$$$:  182-block 12
+    $$$$$:  182-block 13
+        5:  183:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  183-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  183-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  183-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  183-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  183-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  183-block  5
+call   15 never executed
+    $$$$$:  183-block  6
+    $$$$$:  183-block  7
+    $$$$$:  183-block  8
+call   16 never executed
+    $$$$$:  183-block  9
+    $$$$$:  183-block 10
+    $$$$$:  183-block 11
+call   17 never executed
+    $$$$$:  183-block 12
+    $$$$$:  183-block 13
+        -:  184:
+        1:  185:    vector<Medicament> rez1 = service.generalSort(cmpNume);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  185-block  0
+call    4 returned 1
+    $$$$$:  185-block  1
+call    5 never executed
+    $$$$$:  185-block  2
+        1:  186:    vector<Medicament> rez2 = service.generalSort(cmpProducator);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  186-block  0
+call    4 returned 1
+    $$$$$:  186-block  1
+call    5 never executed
+    $$$$$:  186-block  2
+        1:  187:    vector<Medicament> rez3 = service.generalSort(cmpSubstantaPret);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  187-block  0
+call    4 returned 1
+    $$$$$:  187-block  1
+call    5 never executed
+    $$$$$:  187-block  2
+        -:  188:
+       1*:  189:    assert(rez1[0].getNume() == "d,f");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  189-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  189-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  189-block  2
+call    9 never executed
+        1:  189-block  3
+        1:  189-block  4
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  189-block  5
+call   12 returned 1
+    $$$$$:  189-block  6
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  189-block  7
+call   15 never executed
+    $$$$$:  189-block  8
+       1*:  190:    assert(rez1[5].getNume() == "xf,vj");
+        1:  190-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  190-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  190-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  190-block  3
+call    9 never executed
+        1:  190-block  4
+        1:  190-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  190-block  6
+call   12 returned 1
+    $$$$$:  190-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  190-block  8
+call   15 never executed
+    $$$$$:  190-block  9
+        -:  191:
+       1*:  192:    assert(rez2[0].getProducator() == "ceva");
+        1:  192-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  192-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  192-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  192-block  3
+call    9 never executed
+        1:  192-block  4
+        1:  192-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  192-block  6
+call   12 returned 1
+    $$$$$:  192-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  192-block  8
+call   15 never executed
+    $$$$$:  192-block  9
+       1*:  193:    assert(rez2[5].getProducator() == "skdjfn");
+        1:  193-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  193-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  193-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  193-block  3
+call    9 never executed
+        1:  193-block  4
+        1:  193-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  193-block  6
+call   12 returned 1
+    $$$$$:  193-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  193-block  8
+call   15 never executed
+    $$$$$:  193-block  9
+        -:  194:
+       1*:  195:    assert(rez3[0].getNume() == "nurofen");
+        1:  195-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  195-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  195-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  195-block  3
+call    9 never executed
+        1:  195-block  4
+        1:  195-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  195-block  6
+call   12 returned 1
+    $$$$$:  195-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  195-block  8
+call   15 never executed
+    $$$$$:  195-block  9
+       1*:  196:    assert(rez3[1].getNume() == "mfxnv");
+        1:  196-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  196-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  196-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  196-block  3
+call    9 never executed
+        1:  196-block  4
+        1:  196-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  196-block  6
+call   12 returned 1
+    $$$$$:  196-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  196-block  8
+call   15 never executed
+    $$$$$:  196-block  9
+       1*:  197:    assert(rez3[2].getNume() == "d,f");
+        1:  197-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  197-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  197-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  197-block  3
+call    9 never executed
+        1:  197-block  4
+        1:  197-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  197-block  6
+call   12 returned 1
+    $$$$$:  197-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  197-block  8
+call   15 never executed
+    $$$$$:  197-block  9
+        1:  198:}
+        1:  198-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  198-block  1
+call    5 never executed
+    $$$$$:  198-block  2
+call    6 never executed
+    $$$$$:  198-block  3
+call    7 never executed
+    $$$$$:  198-block  4
+call    8 never executed
+    $$$$$:  198-block  5
+call    9 never executed
+        -:  199:
+function _Z13testAddRetetav called 1 returned 100% blocks executed 51%
+        1:  200:void testAddReteta()
+        -:  201:{
+        1:  202:    Repo repo;
+        1:  202-block  0
+call    0 returned 1
+        -:  203:    Validator validator;
+        1:  204:    Service service{repo,validator};
+call    0 returned 1
+        6:  205:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  205-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  205-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  205-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  205-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  205-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  205-block  5
+call   15 never executed
+    $$$$$:  205-block  6
+    $$$$$:  205-block  7
+    $$$$$:  205-block  8
+call   16 never executed
+    $$$$$:  205-block  9
+    $$$$$:  205-block 10
+    $$$$$:  205-block 11
+call   17 never executed
+    $$$$$:  205-block 12
+    $$$$$:  205-block 13
+        6:  206:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  206-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  206-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  206-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  206-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  206-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  206-block  5
+call   15 never executed
+    $$$$$:  206-block  6
+    $$$$$:  206-block  7
+    $$$$$:  206-block  8
+call   16 never executed
+    $$$$$:  206-block  9
+    $$$$$:  206-block 10
+    $$$$$:  206-block 11
+call   17 never executed
+    $$$$$:  206-block 12
+    $$$$$:  206-block 13
+        6:  207:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  207-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  207-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  207-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  207-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  207-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  207-block  5
+call   15 never executed
+    $$$$$:  207-block  6
+    $$$$$:  207-block  7
+    $$$$$:  207-block  8
+call   16 never executed
+    $$$$$:  207-block  9
+    $$$$$:  207-block 10
+    $$$$$:  207-block 11
+call   17 never executed
+    $$$$$:  207-block 12
+    $$$$$:  207-block 13
+        6:  208:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  208-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  208-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  208-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  208-block  5
+call   15 never executed
+    $$$$$:  208-block  6
+    $$$$$:  208-block  7
+    $$$$$:  208-block  8
+call   16 never executed
+    $$$$$:  208-block  9
+    $$$$$:  208-block 10
+    $$$$$:  208-block 11
+call   17 never executed
+    $$$$$:  208-block 12
+    $$$$$:  208-block 13
+        6:  209:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  209-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  209-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  209-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  209-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  209-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  209-block  5
+call   15 never executed
+    $$$$$:  209-block  6
+    $$$$$:  209-block  7
+    $$$$$:  209-block  8
+call   16 never executed
+    $$$$$:  209-block  9
+    $$$$$:  209-block 10
+    $$$$$:  209-block 11
+call   17 never executed
+    $$$$$:  209-block 12
+    $$$$$:  209-block 13
+        6:  210:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  210-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  210-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  210-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  210-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  210-block  5
+call   15 never executed
+    $$$$$:  210-block  6
+    $$$$$:  210-block  7
+    $$$$$:  210-block  8
+call   16 never executed
+    $$$$$:  210-block  9
+    $$$$$:  210-block 10
+    $$$$$:  210-block 11
+call   17 never executed
+    $$$$$:  210-block 12
+    $$$$$:  210-block 13
+        -:  211:
+        2:  212:    service.addReteta("nurofen");
+        1:  212-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  212-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  212-block  2
+call    6 returned 1
+    $$$$$:  212-block  3
+call    7 never executed
+    $$$$$:  212-block  4
+    $$$$$:  212-block  5
+        1:  213:    service.addReteta("nume");
+        1:  213-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  213-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  213-block  2
+call    6 returned 1
+    $$$$$:  213-block  3
+call    7 never executed
+    $$$$$:  213-block  4
+    $$$$$:  213-block  5
+        -:  214:
+        1:  215:    vector<Medicament> m = service.getAllReteta();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  215-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:  216:    assert(m.size()==2);
+        1:  216-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  216-block  1
+call    3 never executed
+        1:  216-block  2
+       1*:  217:    assert(m[0].getNume()=="nurofen");
+        1:  217-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  217-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  217-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  217-block  3
+call    9 never executed
+        1:  217-block  4
+        1:  217-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  217-block  6
+call   12 returned 1
+    $$$$$:  217-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  217-block  8
+call   15 never executed
+    $$$$$:  217-block  9
+       1*:  218:    assert(m[1].getNume()=="nume");
+        1:  218-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  218-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  218-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  218-block  3
+call    9 never executed
+        1:  218-block  4
+        1:  218-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  218-block  6
+call   12 returned 1
+        1:  218-block  7
+    $$$$$:  218-block  8
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  218-block  9
+call   15 never executed
+    $$$$$:  218-block 10
+        -:  219:
+        -:  220:    try{
+       2*:  221:        service.addReteta("nurofen");
+        1:  221-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  221-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  221-block  2
+call    6 never executed
+        1:  221-block  3
+call    7 returned 1
+        1:  221-block  4
+        1:  221-block  5
+        -:  222:    }
+        1:  223:    catch(const MyException& s){
+        1:  223-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  223-block  1
+call    2 returned 1
+        1:  224:        assert(s.getMesaj() == "Acest medicament exista deja in reteta!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  224-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  224-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  224-block  2
+call    8 never executed
+        1:  224-block  3
+        1:  224-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  224-block  5
+call   11 returned 1
+    $$$$$:  224-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  224-block  7
+call   14 never executed
+    $$$$$:  224-block  8
+        1:  225:    }
+        1:  225-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  225-block  1
+call    3 never executed
+        1:  226:}
+        1:  226-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  226-block  1
+call    3 never executed
+    $$$$$:  226-block  2
+call    4 never executed
+    $$$$$:  226-block  3
+call    5 never executed
+        -:  227:
+function _Z16testDeleteRetetav called 1 returned 100% blocks executed 49%
+        1:  228:void testDeleteReteta()
+        -:  229:{
+        1:  230:    Repo repo;
+        1:  230-block  0
+call    0 returned 1
+        -:  231:    Validator validator;
+        1:  232:    Service service{repo,validator};
+call    0 returned 1
+        6:  233:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  233-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  233-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  233-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  233-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  233-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  233-block  5
+call   15 never executed
+    $$$$$:  233-block  6
+    $$$$$:  233-block  7
+    $$$$$:  233-block  8
+call   16 never executed
+    $$$$$:  233-block  9
+    $$$$$:  233-block 10
+    $$$$$:  233-block 11
+call   17 never executed
+    $$$$$:  233-block 12
+    $$$$$:  233-block 13
+        6:  234:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  234-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  234-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  234-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  234-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  234-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  234-block  5
+call   15 never executed
+    $$$$$:  234-block  6
+    $$$$$:  234-block  7
+    $$$$$:  234-block  8
+call   16 never executed
+    $$$$$:  234-block  9
+    $$$$$:  234-block 10
+    $$$$$:  234-block 11
+call   17 never executed
+    $$$$$:  234-block 12
+    $$$$$:  234-block 13
+        6:  235:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  235-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  235-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  235-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  235-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  235-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  235-block  5
+call   15 never executed
+    $$$$$:  235-block  6
+    $$$$$:  235-block  7
+    $$$$$:  235-block  8
+call   16 never executed
+    $$$$$:  235-block  9
+    $$$$$:  235-block 10
+    $$$$$:  235-block 11
+call   17 never executed
+    $$$$$:  235-block 12
+    $$$$$:  235-block 13
+        6:  236:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  236-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  236-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  236-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  236-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  236-block  5
+call   15 never executed
+    $$$$$:  236-block  6
+    $$$$$:  236-block  7
+    $$$$$:  236-block  8
+call   16 never executed
+    $$$$$:  236-block  9
+    $$$$$:  236-block 10
+    $$$$$:  236-block 11
+call   17 never executed
+    $$$$$:  236-block 12
+    $$$$$:  236-block 13
+        6:  237:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  237-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  237-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  237-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  237-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  237-block  5
+call   15 never executed
+    $$$$$:  237-block  6
+    $$$$$:  237-block  7
+    $$$$$:  237-block  8
+call   16 never executed
+    $$$$$:  237-block  9
+    $$$$$:  237-block 10
+    $$$$$:  237-block 11
+call   17 never executed
+    $$$$$:  237-block 12
+    $$$$$:  237-block 13
+        6:  238:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  238-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  238-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  238-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  238-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  238-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  238-block  5
+call   15 never executed
+    $$$$$:  238-block  6
+    $$$$$:  238-block  7
+    $$$$$:  238-block  8
+call   16 never executed
+    $$$$$:  238-block  9
+    $$$$$:  238-block 10
+    $$$$$:  238-block 11
+call   17 never executed
+    $$$$$:  238-block 12
+    $$$$$:  238-block 13
+        -:  239:
+        2:  240:    service.addReteta("nurofen");
+        1:  240-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  240-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  240-block  2
+call    6 returned 1
+    $$$$$:  240-block  3
+call    7 never executed
+    $$$$$:  240-block  4
+    $$$$$:  240-block  5
+        1:  241:    service.addReteta("nume");
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  241-block  2
+call    6 returned 1
+    $$$$$:  241-block  3
+call    7 never executed
+    $$$$$:  241-block  4
+    $$$$$:  241-block  5
+        1:  242:    service.deleteReteta();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  243:    assert(service.getAllReteta().empty());
+        1:  243-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  243-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  243-block  2
+call    6 never executed
+        1:  243-block  3
+        1:  244:}
+        1:  244-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  244-block  1
+call    2 never executed
+    $$$$$:  244-block  2
+call    3 never executed
+        -:  245:
+function _Z18testGenerateRandomv called 1 returned 100% blocks executed 50%
+        1:  246:void testGenerateRandom()
+        -:  247:{
+        1:  248:    Repo repo;
+        1:  248-block  0
+call    0 returned 1
+        -:  249:    Validator validator;
+        1:  250:    Service service{repo,validator};
+call    0 returned 1
+        6:  251:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  251-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  251-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  251-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  251-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  251-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  251-block  5
+call   15 never executed
+    $$$$$:  251-block  6
+    $$$$$:  251-block  7
+    $$$$$:  251-block  8
+call   16 never executed
+    $$$$$:  251-block  9
+    $$$$$:  251-block 10
+    $$$$$:  251-block 11
+call   17 never executed
+    $$$$$:  251-block 12
+    $$$$$:  251-block 13
+        6:  252:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  252-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  252-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  252-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  252-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  252-block  5
+call   15 never executed
+    $$$$$:  252-block  6
+    $$$$$:  252-block  7
+    $$$$$:  252-block  8
+call   16 never executed
+    $$$$$:  252-block  9
+    $$$$$:  252-block 10
+    $$$$$:  252-block 11
+call   17 never executed
+    $$$$$:  252-block 12
+    $$$$$:  252-block 13
+        6:  253:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  253-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  253-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  253-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  253-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  253-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  253-block  5
+call   15 never executed
+    $$$$$:  253-block  6
+    $$$$$:  253-block  7
+    $$$$$:  253-block  8
+call   16 never executed
+    $$$$$:  253-block  9
+    $$$$$:  253-block 10
+    $$$$$:  253-block 11
+call   17 never executed
+    $$$$$:  253-block 12
+    $$$$$:  253-block 13
+        6:  254:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  254-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  254-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  254-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  254-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  254-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  254-block  5
+call   15 never executed
+    $$$$$:  254-block  6
+    $$$$$:  254-block  7
+    $$$$$:  254-block  8
+call   16 never executed
+    $$$$$:  254-block  9
+    $$$$$:  254-block 10
+    $$$$$:  254-block 11
+call   17 never executed
+    $$$$$:  254-block 12
+    $$$$$:  254-block 13
+        6:  255:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  255-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  255-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  255-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  255-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  255-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  255-block  5
+call   15 never executed
+    $$$$$:  255-block  6
+    $$$$$:  255-block  7
+    $$$$$:  255-block  8
+call   16 never executed
+    $$$$$:  255-block  9
+    $$$$$:  255-block 10
+    $$$$$:  255-block 11
+call   17 never executed
+    $$$$$:  255-block 12
+    $$$$$:  255-block 13
+        5:  256:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  256-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  256-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  256-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  256-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  256-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  256-block  5
+call   15 never executed
+    $$$$$:  256-block  6
+    $$$$$:  256-block  7
+    $$$$$:  256-block  8
+call   16 never executed
+    $$$$$:  256-block  9
+    $$$$$:  256-block 10
+    $$$$$:  256-block 11
+call   17 never executed
+    $$$$$:  256-block 12
+    $$$$$:  256-block 13
+        -:  257:
+        1:  258:    service.generateRandomReteta(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  259:    vector<Medicament> m = service.getAllReteta();
+        1:  259-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  259-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:  260:    assert(m.size()==3);
+        1:  260-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  260-block  1
+call    3 never executed
+        1:  260-block  2
+        -:  261:
+        1:  262:    service.generateRandomReteta(100);
+        1:  262-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  263:    m=service.getAllReteta();
+        1:  263-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  263-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:  264:    assert(m.size()==6);
+        1:  264-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  264-block  1
+call    3 never executed
+        1:  264-block  2
+        1:  265:}
+        1:  265-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  265-block  1
+call    3 never executed
+    $$$$$:  265-block  2
+call    4 never executed
+    $$$$$:  265-block  3
+call    5 never executed
+        -:  266:
+function _Z12testFileRepov called 1 returned 100% blocks executed 56%
+        1:  267:void testFileRepo()
+        -:  268:{
+        1:  269:    std::ofstream out("testFileRepo.txt",std::ios::trunc);
+        1:  269-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  270:    out.close();
+        1:  270-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  271:    RepoFile repository{"testFileRepo.txt"};
+        1:  271-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  271-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  271-block  2
+call    6 returned 1
+    $$$$$:  271-block  3
+call    7 never executed
+    $$$$$:  271-block  4
+    $$$$$:  271-block  5
+        6:  272:    repository.addMed(Medicament{"nume",12,"prod","substanta"});
+        1:  272-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  272-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  272-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  272-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:  272-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+    $$$$$:  272-block  5
+call   17 never executed
+    $$$$$:  272-block  6
+call   18 never executed
+    $$$$$:  272-block  7
+    $$$$$:  272-block  8
+    $$$$$:  272-block  9
+call   19 never executed
+    $$$$$:  272-block 10
+    $$$$$:  272-block 11
+    $$$$$:  272-block 12
+call   20 never executed
+    $$$$$:  272-block 13
+    $$$$$:  272-block 14
+    $$$$$:  272-block 15
+        -:  273:
+        1:  274:    RepoFile repository2{"testFileRepo.txt"};
+        1:  274-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  274-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  274-block  2
+call    6 returned 1
+    $$$$$:  274-block  3
+call    7 never executed
+    $$$$$:  274-block  4
+    $$$$$:  274-block  5
+        1:  275:    auto m=repository2.getAll();
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+       1*:  276:    assert(m[0].getNume()=="nume");
+        1:  276-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  276-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  276-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  276-block  3
+call    9 never executed
+        1:  276-block  4
+        1:  276-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  276-block  6
+call   12 returned 1
+    $$$$$:  276-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  276-block  8
+call   15 never executed
+    $$$$$:  276-block  9
+       1*:  277:    assert(m[0].getProducator()=="prod");
+        1:  277-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  277-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  277-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  277-block  3
+call    9 never executed
+        1:  277-block  4
+        1:  277-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  277-block  6
+call   12 returned 1
+    $$$$$:  277-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  277-block  8
+call   15 never executed
+    $$$$$:  277-block  9
+       1*:  278:    assert(m[0].getPret()==12);
+        1:  278-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  278-block  1
+call    4 never executed
+        1:  278-block  2
+       1*:  279:    assert(m[0].getSubstanta()=="substanta");
+        1:  279-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  279-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  279-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  279-block  3
+call    9 never executed
+        1:  279-block  4
+        1:  279-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  279-block  6
+call   12 returned 1
+        1:  279-block  7
+    $$$$$:  279-block  8
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  279-block  9
+call   15 never executed
+    $$$$$:  279-block 10
+        -:  280:
+        1:  281:    repository2.deleteMed("nume");
+        1:  281-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  281-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  281-block  2
+call    6 returned 1
+    $$$$$:  281-block  3
+call    7 never executed
+    $$$$$:  281-block  4
+    $$$$$:  281-block  5
+       1*:  282:    assert(repository2.getAll().empty());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  282-block  0
+call    4 never executed
+        1:  282-block  1
+        -:  283:    try{
+       2*:  284:        repository2.deleteMed("ceva");
+        1:  284-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  284-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  284-block  2
+call    6 never executed
+        1:  284-block  3
+call    7 returned 1
+        1:  284-block  4
+        1:  284-block  5
+        -:  285:    }
+        1:  286:    catch (MyException&){
+        1:  286-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  286-block  1
+call    2 returned 1
+        1:  287:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  288:
+        1:  289:    RepoFile repository3{"testFileRepo.txt"};
+        1:  289-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  289-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  289-block  2
+call    6 returned 1
+    $$$$$:  289-block  3
+call    7 never executed
+    $$$$$:  289-block  4
+    $$$$$:  289-block  5
+       1*:  290:    assert(repository3.getAll().empty());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  290-block  0
+call    4 never executed
+        1:  290-block  1
+        6:  291:    repository3.addMed(Medicament{"nume",12,"prod","substanta"});
+        1:  291-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  291-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  291-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  291-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:  291-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+    $$$$$:  291-block  5
+call   17 never executed
+    $$$$$:  291-block  6
+call   18 never executed
+    $$$$$:  291-block  7
+    $$$$$:  291-block  8
+    $$$$$:  291-block  9
+call   19 never executed
+    $$$$$:  291-block 10
+    $$$$$:  291-block 11
+    $$$$$:  291-block 12
+call   20 never executed
+    $$$$$:  291-block 13
+    $$$$$:  291-block 14
+    $$$$$:  291-block 15
+        6:  292:    repository3.modificaMed(Medicament{"nume",13,"aaaa","bbbb"});
+        1:  292-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  292-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  292-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  292-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:  292-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+    $$$$$:  292-block  5
+call   17 never executed
+    $$$$$:  292-block  6
+call   18 never executed
+    $$$$$:  292-block  7
+    $$$$$:  292-block  8
+    $$$$$:  292-block  9
+call   19 never executed
+    $$$$$:  292-block 10
+    $$$$$:  292-block 11
+    $$$$$:  292-block 12
+call   20 never executed
+    $$$$$:  292-block 13
+    $$$$$:  292-block 14
+    $$$$$:  292-block 15
+        -:  293:
+        1:  294:    RepoFile repository4{"testFileRepo.txt"};
+        1:  294-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  294-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  294-block  2
+call    6 returned 1
+    $$$$$:  294-block  3
+call    7 never executed
+    $$$$$:  294-block  4
+    $$$$$:  294-block  5
+       1*:  295:    assert(repository4.getAll().size()==1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  295-block  0
+call    4 never executed
+        1:  295-block  1
+        1:  296:    m=repository3.getAll();
+        1:  296-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+       1*:  297:    assert(m[0].getNume()=="nume");
+        1:  297-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  297-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  297-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  297-block  3
+call    9 never executed
+        1:  297-block  4
+        1:  297-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  297-block  6
+call   12 returned 1
+    $$$$$:  297-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  297-block  8
+call   15 never executed
+    $$$$$:  297-block  9
+       1*:  298:    assert(m[0].getProducator()=="aaaa");
+        1:  298-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  298-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  298-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  298-block  3
+call    9 never executed
+        1:  298-block  4
+        1:  298-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  298-block  6
+call   12 returned 1
+    $$$$$:  298-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  298-block  8
+call   15 never executed
+    $$$$$:  298-block  9
+       1*:  299:    assert(m[0].getPret()==13);
+        1:  299-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  299-block  1
+call    4 never executed
+        1:  299-block  2
+       1*:  300:    assert(m[0].getSubstanta()=="bbbb");
+        1:  300-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  300-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  300-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  300-block  3
+call    9 never executed
+        1:  300-block  4
+        1:  300-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  300-block  6
+call   12 returned 1
+        1:  300-block  7
+    $$$$$:  300-block  8
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  300-block  9
+call   15 never executed
+    $$$$$:  300-block 10
+        -:  301:
+        -:  302:    try{
+       2*:  303:        RepoFile repostory5{"test/FileRepo.txt"};
+        1:  303-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  303-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  303-block  2
+call    6 never executed
+        1:  303-block  3
+call    7 returned 1
+        1:  303-block  4
+        1:  303-block  5
+    #####:  304:    }
+call    0 never executed
+        1:  305:    catch(...){
+        1:  305-block  0
+        1:  305-block  1
+call    0 returned 1
+        1:  306:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  307:
+        -:  308:
+        1:  309:}
+        1:  309-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  309-block  1
+call    6 never executed
+    $$$$$:  309-block  2
+call    7 never executed
+    $$$$$:  309-block  3
+call    8 never executed
+    $$$$$:  309-block  4
+call    9 never executed
+    $$$$$:  309-block  5
+call   10 never executed
+    $$$$$:  309-block  6
+call   11 never executed
+        -:  310:
+        -:  311:
+function _Z8testUndov called 1 returned 100% blocks executed 52%
+        1:  312:void testUndo()
+        -:  313:{
+        1:  314:    Repo repo;
+        1:  314-block  0
+call    0 returned 1
+        -:  315:    Validator val;
+        1:  316:    Service service{repo,val};
+call    0 returned 1
+        -:  317:    try{
+        1:  318:        service.undo();
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  319:    }
+        1:  320:    catch (MyException& ex){
+        1:  320-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  320-block  1
+call    2 returned 1
+        1:  321:        assert(ex.getMesaj()=="Nu mai exista operatii!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  321-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  321-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  321-block  2
+call    8 never executed
+        1:  321-block  3
+        1:  321-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  321-block  5
+call   11 returned 1
+    $$$$$:  321-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  321-block  7
+call   14 never executed
+    $$$$$:  321-block  8
+        1:  322:    }
+        1:  322-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  322-block  1
+call    3 never executed
+        6:  323:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  323-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  323-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  323-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  323-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  323-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  323-block  5
+call   15 never executed
+    $$$$$:  323-block  6
+    $$$$$:  323-block  7
+    $$$$$:  323-block  8
+call   16 never executed
+    $$$$$:  323-block  9
+    $$$$$:  323-block 10
+    $$$$$:  323-block 11
+call   17 never executed
+    $$$$$:  323-block 12
+    $$$$$:  323-block 13
+        6:  324:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  324-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  324-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  324-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  324-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  324-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  324-block  5
+call   15 never executed
+    $$$$$:  324-block  6
+    $$$$$:  324-block  7
+    $$$$$:  324-block  8
+call   16 never executed
+    $$$$$:  324-block  9
+    $$$$$:  324-block 10
+    $$$$$:  324-block 11
+call   17 never executed
+    $$$$$:  324-block 12
+    $$$$$:  324-block 13
+        6:  325:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  325-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  325-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  325-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  325-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  325-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  325-block  5
+call   15 never executed
+    $$$$$:  325-block  6
+    $$$$$:  325-block  7
+    $$$$$:  325-block  8
+call   16 never executed
+    $$$$$:  325-block  9
+    $$$$$:  325-block 10
+    $$$$$:  325-block 11
+call   17 never executed
+    $$$$$:  325-block 12
+    $$$$$:  325-block 13
+        6:  326:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  326-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  326-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  326-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  326-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  326-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  326-block  5
+call   15 never executed
+    $$$$$:  326-block  6
+    $$$$$:  326-block  7
+    $$$$$:  326-block  8
+call   16 never executed
+    $$$$$:  326-block  9
+    $$$$$:  326-block 10
+    $$$$$:  326-block 11
+call   17 never executed
+    $$$$$:  326-block 12
+    $$$$$:  326-block 13
+        6:  327:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  327-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  327-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  327-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  327-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  327-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  327-block  5
+call   15 never executed
+    $$$$$:  327-block  6
+    $$$$$:  327-block  7
+    $$$$$:  327-block  8
+call   16 never executed
+    $$$$$:  327-block  9
+    $$$$$:  327-block 10
+    $$$$$:  327-block 11
+call   17 never executed
+    $$$$$:  327-block 12
+    $$$$$:  327-block 13
+        5:  328:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  328-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  328-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  328-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  328-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  328-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  328-block  5
+call   15 never executed
+    $$$$$:  328-block  6
+    $$$$$:  328-block  7
+    $$$$$:  328-block  8
+call   16 never executed
+    $$$$$:  328-block  9
+    $$$$$:  328-block 10
+    $$$$$:  328-block 11
+call   17 never executed
+    $$$$$:  328-block 12
+    $$$$$:  328-block 13
+        -:  329:
+        1:  330:    service.undo();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  331:    assert(service.getAll().size()==5);
+        1:  331-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  331-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  331-block  2
+call    6 never executed
+        1:  331-block  3
+        -:  332:    try{
+       2*:  333:        service.cauta("s,dfj");
+        1:  333-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  333-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  333-block  2
+call    6 never executed
+        1:  333-block  3
+call    7 returned 1
+        1:  333-block  4
+        1:  333-block  5
+        -:  334:    }
+        1:  335:    catch(MyException& ex){
+        1:  335-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  335-block  1
+call    2 returned 1
+        1:  336:        assert(ex.getMesaj()=="Acest medicament nu exista!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  336-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  336-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  336-block  2
+call    8 never executed
+        1:  336-block  3
+        1:  336-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  336-block  5
+call   11 returned 1
+    $$$$$:  336-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  336-block  7
+call   14 never executed
+    $$$$$:  336-block  8
+        1:  337:    }
+        1:  337-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  337-block  1
+call    3 never executed
+        1:  338:    service.deleteMed("nurofen");
+        1:  338-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  338-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  338-block  2
+call    6 returned 1
+    $$$$$:  338-block  3
+call    7 never executed
+    $$$$$:  338-block  4
+    $$$$$:  338-block  5
+        1:  339:    service.undo();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  340:    assert(service.getAll().size()==5);
+        1:  340-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  340-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  340-block  2
+call    6 never executed
+        1:  340-block  3
+        1:  341:    Medicament m = service.cauta("nurofen");
+        1:  341-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  341-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  341-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  341-block  3
+call    9 returned 1
+    $$$$$:  341-block  4
+call   10 never executed
+    $$$$$:  341-block  5
+    $$$$$:  341-block  6
+       1*:  342:    assert(m.getNume()=="nurofen");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  342-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  342-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  342-block  2
+call    8 never executed
+        1:  342-block  3
+        1:  342-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  342-block  5
+call   11 returned 1
+    $$$$$:  342-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  342-block  7
+call   14 never executed
+    $$$$$:  342-block  8
+       1*:  343:    assert(m.getPret()==12);
+        1:  343-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  343-block  1
+call    3 never executed
+        1:  343-block  2
+       1*:  344:    assert(m.getProducator()=="ceva");
+        1:  344-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  344-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  344-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  344-block  3
+call    8 never executed
+        1:  344-block  4
+        1:  344-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  344-block  6
+call   11 returned 1
+    $$$$$:  344-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  344-block  8
+call   14 never executed
+    $$$$$:  344-block  9
+       1*:  345:    assert(m.getSubstanta()=="ibruprofen");
+        1:  345-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  345-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  345-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  345-block  3
+call    8 never executed
+        1:  345-block  4
+        1:  345-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  345-block  6
+call   11 returned 1
+        1:  345-block  7
+    $$$$$:  345-block  8
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  345-block  9
+call   14 never executed
+    $$$$$:  345-block 10
+        -:  346:
+        5:  347:    service.modifica("d,f",12,"altceva","subst");
+        1:  347-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  347-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  347-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  347-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  347-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  347-block  5
+call   15 never executed
+    $$$$$:  347-block  6
+    $$$$$:  347-block  7
+    $$$$$:  347-block  8
+call   16 never executed
+    $$$$$:  347-block  9
+    $$$$$:  347-block 10
+    $$$$$:  347-block 11
+call   17 never executed
+    $$$$$:  347-block 12
+    $$$$$:  347-block 13
+        1:  348:    service.undo();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  349:    m = service.cauta("d,f");
+        1:  349-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  349-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  349-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  349-block  3
+call    9 returned 1
+    $$$$$:  349-block  4
+call   10 never executed
+    $$$$$:  349-block  5
+    $$$$$:  349-block  6
+       1*:  350:    assert(m.getNume()=="d,f");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  350-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  350-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  350-block  2
+call    8 never executed
+        1:  350-block  3
+        1:  350-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  350-block  5
+call   11 returned 1
+    $$$$$:  350-block  6
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  350-block  7
+call   14 never executed
+    $$$$$:  350-block  8
+       1*:  351:    assert(m.getProducator()=="ceva");
+        1:  351-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  351-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  351-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  351-block  3
+call    8 never executed
+        1:  351-block  4
+        1:  351-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  351-block  6
+call   11 returned 1
+    $$$$$:  351-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  351-block  8
+call   14 never executed
+    $$$$$:  351-block  9
+       1*:  352:    assert(m.getPret()==122);
+        1:  352-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  352-block  1
+call    3 never executed
+        1:  352-block  2
+       1*:  353:    assert(m.getSubstanta()=="ibruprofen");
+        1:  353-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  353-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  353-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  353-block  3
+call    8 never executed
+        1:  353-block  4
+        1:  353-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  353-block  6
+call   11 returned 1
+    $$$$$:  353-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:  353-block  8
+call   14 never executed
+    $$$$$:  353-block  9
+        1:  354:}
+        1:  354-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  354-block  1
+call    3 never executed
+    $$$$$:  354-block  2
+call    4 never executed
+    $$$$$:  354-block  3
+call    5 never executed
+        -:  355:
+function _Z10testExportv called 1 returned 100% blocks executed 49%
+        1:  356:void testExport()
+        -:  357:{
+        1:  358:    Repo repo;
+        1:  358-block  0
+call    0 returned 1
+        -:  359:    Validator validator;
+        1:  360:    Service service{repo,validator};
+call    0 returned 1
+        6:  361:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  361-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  361-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  361-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  361-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  361-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  361-block  5
+call   15 never executed
+    $$$$$:  361-block  6
+    $$$$$:  361-block  7
+    $$$$$:  361-block  8
+call   16 never executed
+    $$$$$:  361-block  9
+    $$$$$:  361-block 10
+    $$$$$:  361-block 11
+call   17 never executed
+    $$$$$:  361-block 12
+    $$$$$:  361-block 13
+        6:  362:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  362-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  362-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  362-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  362-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  362-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  362-block  5
+call   15 never executed
+    $$$$$:  362-block  6
+    $$$$$:  362-block  7
+    $$$$$:  362-block  8
+call   16 never executed
+    $$$$$:  362-block  9
+    $$$$$:  362-block 10
+    $$$$$:  362-block 11
+call   17 never executed
+    $$$$$:  362-block 12
+    $$$$$:  362-block 13
+        6:  363:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  363-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  363-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  363-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  363-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  363-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  363-block  5
+call   15 never executed
+    $$$$$:  363-block  6
+    $$$$$:  363-block  7
+    $$$$$:  363-block  8
+call   16 never executed
+    $$$$$:  363-block  9
+    $$$$$:  363-block 10
+    $$$$$:  363-block 11
+call   17 never executed
+    $$$$$:  363-block 12
+    $$$$$:  363-block 13
+        6:  364:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  364-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  364-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  364-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  364-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  364-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  364-block  5
+call   15 never executed
+    $$$$$:  364-block  6
+    $$$$$:  364-block  7
+    $$$$$:  364-block  8
+call   16 never executed
+    $$$$$:  364-block  9
+    $$$$$:  364-block 10
+    $$$$$:  364-block 11
+call   17 never executed
+    $$$$$:  364-block 12
+    $$$$$:  364-block 13
+        6:  365:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  365-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  365-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  365-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  365-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  365-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  365-block  5
+call   15 never executed
+    $$$$$:  365-block  6
+    $$$$$:  365-block  7
+    $$$$$:  365-block  8
+call   16 never executed
+    $$$$$:  365-block  9
+    $$$$$:  365-block 10
+    $$$$$:  365-block 11
+call   17 never executed
+    $$$$$:  365-block 12
+    $$$$$:  365-block 13
+        6:  366:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  366-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  366-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  366-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  366-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  366-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  366-block  5
+call   15 never executed
+    $$$$$:  366-block  6
+    $$$$$:  366-block  7
+    $$$$$:  366-block  8
+call   16 never executed
+    $$$$$:  366-block  9
+    $$$$$:  366-block 10
+    $$$$$:  366-block 11
+call   17 never executed
+    $$$$$:  366-block 12
+    $$$$$:  366-block 13
+        -:  367:
+        2:  368:    service.addReteta("nurofen");
+        1:  368-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  368-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  368-block  2
+call    6 returned 1
+    $$$$$:  368-block  3
+call    7 never executed
+    $$$$$:  368-block  4
+    $$$$$:  368-block  5
+        2:  369:    service.addReteta("nume");
+        1:  369-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  369-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  369-block  2
+call    6 returned 1
+    $$$$$:  369-block  3
+call    7 never executed
+    $$$$$:  369-block  4
+    $$$$$:  369-block  5
+        -:  370:
+        1:  371:    string nume="testExport.html";
+        1:  371-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  371-block  1
+        1:  372:    service.exportRetetaHTML(nume);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  373:    string numeRau="test/Export.html";
+        1:  373-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  373-block  1
+        -:  374:    try{
+        1:  375:        service.exportRetetaHTML(numeRau);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  376:    }
+        1:  377:    catch (MyException& ex){
+        1:  377-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  377-block  1
+call    2 returned 1
+        1:  378:        assert(ex.getMesaj()=="Nu pot deschide fisierul "+numeRau);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  378-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  378-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:  378-block  2
+call    9 never executed
+        1:  378-block  3
+        1:  378-block  4
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  378-block  5
+call   12 returned 1
+        1:  378-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  378-block  7
+call   15 returned 1
+    $$$$$:  378-block  8
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:  378-block  9
+call   18 never executed
+    $$$$$:  378-block 10
+    $$$$$:  378-block 11
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:  378-block 12
+call   21 never executed
+    $$$$$:  378-block 13
+        1:  379:    }
+        1:  379-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  379-block  1
+call    3 never executed
+        -:  380:
+        1:  381:    string nume1="testExport1.cvs";
+        1:  381-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  381-block  1
+        1:  382:    service.exportRetetaCSV(nume1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  383:    string nume1Rau="test/Export.cvs";
+        1:  383-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  383-block  1
+        -:  384:    try{
+        1:  385:        service.exportRetetaCSV(nume1Rau);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  386:    }
+        1:  387:    catch (MyException& ex){
+        1:  387-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  387-block  1
+call    2 returned 1
+        1:  388:        assert(ex.getMesaj()=="Nu pot deschide fisierul "+nume1Rau);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  388-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  388-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:  388-block  2
+call    9 never executed
+        1:  388-block  3
+        1:  388-block  4
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  388-block  5
+call   12 returned 1
+        1:  388-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  388-block  7
+call   15 returned 1
+    $$$$$:  388-block  8
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:  388-block  9
+call   18 never executed
+    $$$$$:  388-block 10
+    $$$$$:  388-block 11
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:  388-block 12
+call   21 never executed
+    $$$$$:  388-block 13
+        1:  389:    }
+        1:  389-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  389-block  1
+call    3 never executed
+        -:  390:
+        1:  391:}
+        1:  391-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  391-block  1
+call    6 never executed
+    $$$$$:  391-block  2
+call    7 never executed
+    $$$$$:  391-block  3
+call    8 never executed
+    $$$$$:  391-block  4
+call    9 never executed
+    $$$$$:  391-block  5
+call   10 never executed
+    $$$$$:  391-block  6
+call   11 never executed
+        -:  392:
+function _Z14testCalculeazav called 1 returned 100% blocks executed 49%
+        1:  393:void testCalculeaza()
+        -:  394:{
+        1:  395:    Repo repo;
+        1:  395-block  0
+call    0 returned 1
+        -:  396:    Validator validator;
+        1:  397:    Service service{repo,validator};
+call    0 returned 1
+        6:  398:    service.add("nurofen",12,"ceva","ibruprofen");
+        1:  398-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  398-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  398-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  398-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  398-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  398-block  5
+call   15 never executed
+    $$$$$:  398-block  6
+    $$$$$:  398-block  7
+    $$$$$:  398-block  8
+call   16 never executed
+    $$$$$:  398-block  9
+    $$$$$:  398-block 10
+    $$$$$:  398-block 11
+call   17 never executed
+    $$$$$:  398-block 12
+    $$$$$:  398-block 13
+        6:  399:    service.add("nume",13,"skdjfn","ksjfn");
+        1:  399-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  399-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  399-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  399-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  399-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  399-block  5
+call   15 never executed
+    $$$$$:  399-block  6
+    $$$$$:  399-block  7
+    $$$$$:  399-block  8
+call   16 never executed
+    $$$$$:  399-block  9
+    $$$$$:  399-block 10
+    $$$$$:  399-block 11
+call   17 never executed
+    $$$$$:  399-block 12
+    $$$$$:  399-block 13
+        6:  400:    service.add("mfxnv",100,"ceva","ibruprofen");
+        1:  400-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  400-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  400-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  400-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  400-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  400-block  5
+call   15 never executed
+    $$$$$:  400-block  6
+    $$$$$:  400-block  7
+    $$$$$:  400-block  8
+call   16 never executed
+    $$$$$:  400-block  9
+    $$$$$:  400-block 10
+    $$$$$:  400-block 11
+call   17 never executed
+    $$$$$:  400-block 12
+    $$$$$:  400-block 13
+        6:  401:    service.add("xf,vj",1873,"skdjfn","ksjfn");
+        1:  401-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  401-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  401-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  401-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  401-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  401-block  5
+call   15 never executed
+    $$$$$:  401-block  6
+    $$$$$:  401-block  7
+    $$$$$:  401-block  8
+call   16 never executed
+    $$$$$:  401-block  9
+    $$$$$:  401-block 10
+    $$$$$:  401-block 11
+call   17 never executed
+    $$$$$:  401-block 12
+    $$$$$:  401-block 13
+        6:  402:    service.add("d,f",122,"ceva","ibruprofen");
+        1:  402-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  402-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  402-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  402-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  402-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  402-block  5
+call   15 never executed
+    $$$$$:  402-block  6
+    $$$$$:  402-block  7
+    $$$$$:  402-block  8
+call   16 never executed
+    $$$$$:  402-block  9
+    $$$$$:  402-block 10
+    $$$$$:  402-block 11
+call   17 never executed
+    $$$$$:  402-block 12
+    $$$$$:  402-block 13
+        5:  403:    service.add("s,dfj",4,"skdjfn","ksjfn");
+        1:  403-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  403-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  403-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  403-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  403-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  403-block  5
+call   15 never executed
+    $$$$$:  403-block  6
+    $$$$$:  403-block  7
+    $$$$$:  403-block  8
+call   16 never executed
+    $$$$$:  403-block  9
+    $$$$$:  403-block 10
+    $$$$$:  403-block 11
+call   17 never executed
+    $$$$$:  403-block 12
+    $$$$$:  403-block 13
+        -:  404:
+        1:  405:    map<string,int> dict = service.calculeaza();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  406:    assert(dict.size()==2);
+        1:  406-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  406-block  1
+call    3 never executed
+        1:  406-block  2
+       2*:  407:    assert(dict["ceva"]==3);
+        1:  407-block  0
+        1:  407-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  407-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  407-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  407-block  4
+call    8 never executed
+        1:  407-block  5
+        1:  407-block  6
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  407-block  7
+call   11 returned 1
+        1:  407-block  8
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+    $$$$$:  407-block  9
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:  407-block 10
+call   16 never executed
+    $$$$$:  407-block 11
+    $$$$$:  407-block 12
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  407-block 13
+       2*:  408:    assert(dict["skdjfn"]==3);
+        1:  408-block  0
+        1:  408-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  408-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  408-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  408-block  4
+call    8 never executed
+        1:  408-block  5
+        1:  408-block  6
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  408-block  7
+call   11 returned 1
+        1:  408-block  8
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+    $$$$$:  408-block  9
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:  408-block 10
+call   16 never executed
+    $$$$$:  408-block 11
+    $$$$$:  408-block 12
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  408-block 13
+        1:  409:}
+        1:  409-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  409-block  1
+call    3 never executed
+    $$$$$:  409-block  2
+call    4 never executed
+    $$$$$:  409-block  3
+call    5 never executed

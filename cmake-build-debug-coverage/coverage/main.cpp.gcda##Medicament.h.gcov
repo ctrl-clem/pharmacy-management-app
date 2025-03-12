@@ -1,0 +1,95 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Medicament.h
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OOP_LAB6_7_MEDICAMENT_H
+        -:    2:#define OOP_LAB6_7_MEDICAMENT_H
+        -:    3:#include <string>
+        -:    4:#include <iostream>
+        -:    5:#include <utility>
+        -:    6:using std::cout;
+        -:    7:using std::string;
+        -:    8:
+        -:    9:class Medicament
+        -:   10:{
+        -:   11:private:
+        -:   12:    string nume;
+        -:   13:    int pret;
+        -:   14:    string producator;
+        -:   15:    string substanta;
+        -:   16:
+        -:   17:public:
+function _ZN10MedicamentC1Ev called 975 returned 100% blocks executed 100%
+      975:   18:    Medicament() = default;
+      975:   18-block  0
+call    0 returned 975
+call    1 returned 975
+call    2 returned 975
+        -:   19:
+function _ZN10MedicamentC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 228 returned 100% blocks executed 100%
+      228:   20:    Medicament(string nume, int pret, string producator, string substanta) : nume{ std::move(nume) }, pret{ pret }, producator{std::move(producator)}, substanta{std::move(substanta)}{
+      228:   20-block  0
+call    0 returned 228
+call    1 returned 228
+call    2 returned 228
+call    3 returned 228
+call    4 returned 228
+call    5 returned 228
+      228:   21:    }
+        -:   22:
+        -:   23:    //constructor de copiere
+function _ZN10MedicamentC1ERKS_ called 758 returned 100% blocks executed 62%
+      758:   24:    Medicament(const Medicament& other) = default;
+      758:   24-block  0
+call    0 returned 758
+call    1 returned 758
+branch  2 taken 758 (fallthrough)
+branch  3 taken 0 (throw)
+      758:   24-block  1
+call    4 returned 758
+branch  5 taken 758 (fallthrough)
+branch  6 taken 0 (throw)
+      758:   24-block  2
+    $$$$$:   24-block  3
+call    7 never executed
+    $$$$$:   24-block  4
+call    8 never executed
+        -:   25:
+        -:   26:    /*Returneaza numele medicamentului*/
+function _ZNK10Medicament7getNumeB5cxx11Ev called 481 returned 100% blocks executed 100%
+      481:   27:    [[nodiscard]] std::string getNume() const{
+      481:   28:        return this->nume;
+      481:   28-block  0
+call    0 returned 481
+        -:   29:    }
+        -:   30:
+        -:   31:    /*Returneaza producatorul medicamentului*/
+        -:   32:    [[nodiscard]] std::string getProducator() const{
+        -:   33:        return this->producator;
+        -:   34:    }
+        -:   35:
+        -:   36:    /*Returneaza substanta medicamentului*/
+        -:   37:    [[nodiscard]] std::string getSubstanta() const{
+        -:   38:        return this->substanta;
+        -:   39:    }
+        -:   40:
+        -:   41:    /*Returneaza pretul medicamentului*/
+function _ZNK10Medicament7getPretEv called 200 returned 100% blocks executed 100%
+      200:   42:    [[nodiscard]] int getPret() const{
+        -:   43:
+      200:   44:        return this->pret;
+      200:   44-block  0
+        -:   45:    }
+        -:   46:
+function _ZN10MedicamentD1Ev called 1961 returned 100% blocks executed 100%
+     1961:   47:    ~Medicament() = default;
+     1961:   47-block  0
+call    0 returned 1961
+call    1 returned 1961
+call    2 returned 1961
+        -:   48:};
+        -:   49:
+        -:   50:
+        -:   51:
+        -:   52:
+        -:   53:#endif //OOP_LAB6_7_MEDICAMENT_H

@@ -1,0 +1,1544 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/UI.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\UI.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "UI.h"
+        -:    2:#include <iostream>
+        -:    3:#include <stdexcept>
+        -:    4:using std::cout;
+        -:    5:using std::cin;
+function _ZN2UI9printMenuEv called 0 returned 0% blocks executed 0%
+    #####:    6:void UI::printMenu()
+        -:    7:{
+        -:    8:    cout<<" 1. Adaugare medicament\n 2. Stergere medicament\n 3. Modifica medicament\n 4. Afiseaza farmacie\n 5. Cauta\n 6. Filtrare pret\n 7. Filtrare substanta\n 8. Sortare nume\n"
+        -:    9:          " 9. Sortare producator\n 10. Sortare substanta activa+pret\n 11. Adauga medicament in reteta dupa nume\n 12. Sterge reteta\n 13. Genereaza reteta\n 14. Afiseaza reteta\n"
+    #####:   10:          " 15. Afiseaza dictionar\n 16. Export reteta CSV\n 17. Export reteta HTML\n 18. Undo\n 0. Exit\n";
+    %%%%%:   10-block  0
+call    0 never executed
+    #####:   11:}
+        -:   12:
+function _ZN2UI3runEv called 0 returned 0% blocks executed 0%
+    #####:   13:void UI::run()
+    %%%%%:   13-block  0
+        -:   14:{
+        -:   15:    while(true)
+        -:   16:    {
+    #####:   17:        int cmd=0;
+    #####:   18:        printMenu();
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   19:        cin>>cmd;
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   20:        if(cmd == 0)
+    %%%%%:   20-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   21:            break;
+    %%%%%:   21-block  0
+    #####:   22:        else if(cmd == 1)
+    %%%%%:   22-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   23:        {
+    #####:   24:            string nume,producator,substanta;
+    %%%%%:   24-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   25:            int pret=0;
+    #####:   26:            cout<<"Nume: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   27:            cin>>nume;
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   28:            cout<<"Pret: ";
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   29:            cin >> pret;
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   30:            cout<<"Producator: ";
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   31:            cin>>producator;
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   32:            cout<<"Substanta: ";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   33:            cin>>substanta;
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   34:            try {
+    #####:   35:                service.add(nume, pret, producator, substanta);
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   35-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   35-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   35-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   35-block  4
+call   12 never executed
+call   13 never executed
+call   14 never executed
+    $$$$$:   35-block  5
+call   15 never executed
+    $$$$$:   35-block  6
+    $$$$$:   35-block  7
+call   16 never executed
+    $$$$$:   35-block  8
+    $$$$$:   35-block  9
+call   17 never executed
+    $$$$$:   35-block 10
+    #####:   36:                cout<<"Medicament adaugat cu succes!\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   37:            }
+    =====:   38:            catch(MyException& ex){
+    $$$$$:   38-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   38-block  1
+call    3 never executed
+    =====:   39:                cout<<ex.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   39-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   39-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   39-block  2
+call    9 never executed
+    $$$$$:   39-block  3
+call   10 never executed
+    $$$$$:   39-block  4
+    =====:   40:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   40-block  0
+call    3 never executed
+    =====:   41:            catch(ValidationException& ex){
+    $$$$$:   41-block  0
+call    0 never executed
+    =====:   42:                cout<<ex.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   42-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   42-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   42-block  2
+call    9 never executed
+    $$$$$:   42-block  3
+call   10 never executed
+    $$$$$:   42-block  4
+    =====:   43:            }
+call    0 never executed
+    $$$$$:   43-block  0
+call    1 never executed
+        -:   44:
+    #####:   45:        }
+    %%%%%:   45-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   45-block  1
+call    3 never executed
+    $$$$$:   45-block  2
+call    4 never executed
+    $$$$$:   45-block  3
+call    5 never executed
+    #####:   46:        else if(cmd == 2)
+    %%%%%:   46-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   47:        {
+    #####:   48:            string nume;
+    %%%%%:   48-block  0
+call    0 never executed
+    #####:   49:            cout<<"Introduceti numele medicamentului de sters: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   50:            cin>>nume;
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   51:            try{
+    #####:   52:                service.deleteMed(nume);
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   53:                cout<<"Stergerea a fost efectuata cu succes!\n";
+    %%%%%:   53-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   54:            }
+    =====:   55:            catch(MyException& ex){
+    $$$$$:   55-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   55-block  1
+call    2 never executed
+    =====:   56:                cout<<ex.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   56-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   56-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   56-block  2
+call    9 never executed
+    $$$$$:   56-block  3
+call   10 never executed
+    $$$$$:   56-block  4
+    =====:   57:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   57-block  0
+call    3 never executed
+    #####:   58:        }
+    %%%%%:   58-block  0
+call    0 never executed
+    $$$$$:   58-block  1
+call    1 never executed
+    #####:   59:        else if(cmd == 3)
+    %%%%%:   59-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   60:        {
+    #####:   61:            string nume,prodNou,subNoua;
+    %%%%%:   61-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   62:            cout<<"Introduceti numele medicamentului pe care doriti sa il modificati: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   63:            cin>>nume;
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   64:            int pretNou=0;
+    #####:   65:            cout<<"Introduceti noul pret: ";
+    %%%%%:   65-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   66:            cin>>pretNou;
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   67:            cout<<"Introduceti noul producator: ";
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   68:            cin>>prodNou;
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   69:            cout<<"Introduceti noua substanta activa: ";
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   70:            cin>>subNoua;
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   71:            try{
+    #####:   72:                service.modifica(nume,pretNou,prodNou,subNoua);
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   73:                cout<<"Medicament modificat cu succes!\n";
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   74:            }
+    =====:   75:            catch(ValidationException& ex){
+    $$$$$:   75-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   75-block  1
+call    3 never executed
+    =====:   76:                cout<<ex.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   76-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   76-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   76-block  2
+call    9 never executed
+    $$$$$:   76-block  3
+call   10 never executed
+    $$$$$:   76-block  4
+    =====:   77:            }
+call    0 never executed
+    $$$$$:   77-block  0
+call    1 never executed
+    =====:   78:            catch(MyException& ex){
+    $$$$$:   78-block  0
+call    0 never executed
+    =====:   79:                cout<<ex.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   79-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   79-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   79-block  2
+call    9 never executed
+    $$$$$:   79-block  3
+call   10 never executed
+    $$$$$:   79-block  4
+    =====:   80:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   80-block  0
+call    3 never executed
+    #####:   81:        }
+    %%%%%:   81-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   81-block  1
+call    3 never executed
+    $$$$$:   81-block  2
+call    4 never executed
+    $$$$$:   81-block  3
+call    5 never executed
+    #####:   82:        else if(cmd == 4)
+    %%%%%:   82-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   83:        {
+    #####:   84:            const vector<Medicament>& m = service.getAll();
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   85:            for(const auto& med:m)
+    %%%%%:   85-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   85-block  1
+call    2 never executed
+    %%%%%:   85-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:   86:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   86-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   86-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   86-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   86-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   86-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   86-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   86-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   86-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:   86-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:   86-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:   86-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:   86-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:   86-block 12
+call   41 never executed
+    $$$$$:   86-block 13
+    $$$$$:   86-block 14
+call   42 never executed
+    $$$$$:   86-block 15
+    $$$$$:   86-block 16
+call   43 never executed
+    $$$$$:   86-block 17
+        -:   87:
+        -:   88:        }
+    #####:   89:        else if(cmd == 5)
+    %%%%%:   89-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   90:        {
+    #####:   91:            string nume;
+    %%%%%:   91-block  0
+call    0 never executed
+    #####:   92:            cout<<"Introduceti numele medicamentului pe care doriti sa il cautati\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   93:            cin>>nume;
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   94:            try {
+    #####:   95:                Medicament med = service.cauta(nume);
+    %%%%%:   95-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   95-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   96:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   96-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   96-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   96-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   96-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   96-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   96-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   96-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   96-block  8
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:   96-block  9
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:   96-block 10
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:   96-block 11
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:   96-block 12
+call   37 never executed
+call   38 never executed
+call   39 never executed
+    $$$$$:   96-block 13
+call   40 never executed
+    $$$$$:   96-block 14
+    $$$$$:   96-block 15
+call   41 never executed
+    $$$$$:   96-block 16
+    $$$$$:   96-block 17
+call   42 never executed
+    $$$$$:   96-block 18
+    #####:   97:            }
+call    0 never executed
+    $$$$$:   97-block  0
+call    1 never executed
+    =====:   98:            catch(MyException &str){
+    $$$$$:   98-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   98-block  1
+call    2 never executed
+    =====:   99:                cout<<str.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   99-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   99-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:   99-block  2
+call    9 never executed
+    $$$$$:   99-block  3
+call   10 never executed
+    $$$$$:   99-block  4
+    =====:  100:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  100-block  0
+call    3 never executed
+    #####:  101:        }
+    %%%%%:  101-block  0
+call    0 never executed
+    $$$$$:  101-block  1
+call    1 never executed
+    #####:  102:        else if(cmd==6)
+    %%%%%:  102-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  103:        {
+        -:  104:            int pret;
+    #####:  105:            cout<<"Introduceti pretul dupa care doriti sa filtrati\n";
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  106:            cin>>pret;
+    %%%%%:  106-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  107:            vector<Medicament> rez = service.filtrarePret(pret);
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  108:            for(const auto& med: rez)
+    %%%%%:  108-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  108-block  1
+call    2 never executed
+    %%%%%:  108-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  109:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  109-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  109-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  109-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  109-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  109-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  109-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  109-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  109-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  109-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  109-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  109-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  109-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  109-block 12
+call   41 never executed
+    $$$$$:  109-block 13
+    $$$$$:  109-block 14
+call   42 never executed
+    $$$$$:  109-block 15
+    $$$$$:  109-block 16
+call   43 never executed
+    $$$$$:  109-block 17
+    #####:  110:        }
+    %%%%%:  110-block  0
+call    0 never executed
+    $$$$$:  110-block  1
+call    1 never executed
+        -:  111:
+    #####:  112:        else if(cmd==7)
+    %%%%%:  112-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  113:        {
+    #####:  114:            string substanta;
+    %%%%%:  114-block  0
+call    0 never executed
+    #####:  115:            cout<<"Introduceti substanta dupa care doriti sa filtrati\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  116:            cin>>substanta;
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  117:            vector<Medicament> rez = service.filtrareSubstanta(substanta);
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  118:            for(const auto& med: rez)
+    %%%%%:  118-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  118-block  1
+call    2 never executed
+    %%%%%:  118-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  119:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  119-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  119-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  119-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  119-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  119-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  119-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  119-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  119-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  119-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  119-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  119-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  119-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  119-block 12
+call   41 never executed
+    $$$$$:  119-block 13
+    $$$$$:  119-block 14
+call   42 never executed
+    $$$$$:  119-block 15
+    $$$$$:  119-block 16
+call   43 never executed
+    $$$$$:  119-block 17
+    #####:  120:        }
+    %%%%%:  120-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  120-block  1
+call    2 never executed
+    $$$$$:  120-block  2
+call    3 never executed
+    #####:  121:        else if(cmd == 8)
+    %%%%%:  121-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  122:        {
+    #####:  123:            vector<Medicament> rez = service.generalSort(cmpNume);
+    %%%%%:  123-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  123-block  1
+call    4 never executed
+    $$$$$:  123-block  2
+call    5 never executed
+    $$$$$:  123-block  3
+    #####:  124:            if(rez.size()>0)
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  125:            for(const auto& med: rez)
+    %%%%%:  125-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  125-block  1
+call    2 never executed
+    %%%%%:  125-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  126:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  126-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  126-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  126-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  126-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  126-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  126-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  126-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  126-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  126-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  126-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  126-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  126-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  126-block 12
+call   41 never executed
+    $$$$$:  126-block 13
+    $$$$$:  126-block 14
+call   42 never executed
+    $$$$$:  126-block 15
+    $$$$$:  126-block 16
+call   43 never executed
+    $$$$$:  126-block 17
+        -:  127:
+    #####:  128:        }
+    %%%%%:  128-block  0
+call    0 never executed
+    $$$$$:  128-block  1
+call    1 never executed
+    #####:  129:        else if(cmd == 9)
+    %%%%%:  129-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  130:        {
+    #####:  131:            vector<Medicament> rez = service.generalSort(cmpProducator);
+    %%%%%:  131-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  131-block  1
+call    4 never executed
+    $$$$$:  131-block  2
+call    5 never executed
+    $$$$$:  131-block  3
+    #####:  132:            for(const auto& med: rez)
+call    0 never executed
+call    1 never executed
+    %%%%%:  132-block  0
+call    2 never executed
+    %%%%%:  132-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  133:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  133-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  133-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  133-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  133-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  133-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  133-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  133-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  133-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  133-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  133-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  133-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  133-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  133-block 12
+call   41 never executed
+    $$$$$:  133-block 13
+    $$$$$:  133-block 14
+call   42 never executed
+    $$$$$:  133-block 15
+    $$$$$:  133-block 16
+call   43 never executed
+    $$$$$:  133-block 17
+        -:  134:
+    #####:  135:        }
+    %%%%%:  135-block  0
+call    0 never executed
+    $$$$$:  135-block  1
+call    1 never executed
+    #####:  136:        else if(cmd == 10)
+    %%%%%:  136-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  137:        {
+    #####:  138:            vector<Medicament> rez = service.generalSort(cmpSubstantaPret);
+    %%%%%:  138-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  138-block  1
+call    4 never executed
+    $$$$$:  138-block  2
+call    5 never executed
+    $$$$$:  138-block  3
+    #####:  139:            for(const auto& med: rez)
+call    0 never executed
+call    1 never executed
+    %%%%%:  139-block  0
+call    2 never executed
+    %%%%%:  139-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  140:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  140-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  140-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  140-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  140-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  140-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  140-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  140-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  140-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  140-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  140-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  140-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  140-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  140-block 12
+call   41 never executed
+    $$$$$:  140-block 13
+    $$$$$:  140-block 14
+call   42 never executed
+    $$$$$:  140-block 15
+    $$$$$:  140-block 16
+call   43 never executed
+    $$$$$:  140-block 17
+        -:  141:
+    #####:  142:        }
+    %%%%%:  142-block  0
+call    0 never executed
+    $$$$$:  142-block  1
+call    1 never executed
+    #####:  143:        else if(cmd == 11)
+    %%%%%:  143-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  144:        {
+    #####:  145:            cout<<"Introduceti numele medicamentului pe care doriti sa il adaugati in reteta: ";
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  146:            string nume;
+    %%%%%:  146-block  0
+call    0 never executed
+    #####:  147:            cin>>nume;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  148:            try {
+    #####:  149:                service.addReteta(nume);
+    %%%%%:  149-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  150:                cout<<"Medicament introdus cu succes!\n";
+    %%%%%:  150-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  151:
+        -:  152:            }
+    =====:  153:            catch(const MyException& s){
+    $$$$$:  153-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  153-block  1
+call    2 never executed
+    =====:  154:                cout<<s.getMesaj()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  154-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:  154-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    $$$$$:  154-block  2
+call    9 never executed
+    $$$$$:  154-block  3
+call   10 never executed
+    $$$$$:  154-block  4
+    =====:  155:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  155-block  0
+call    3 never executed
+    #####:  156:            cout<<"Reteta are: "<<service.getAllReteta().size()<<" medicamente\n";
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  156-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  156-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  156-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    #####:  157:        }
+    %%%%%:  157-block  0
+call    0 never executed
+    $$$$$:  157-block  1
+call    1 never executed
+    #####:  158:        else if(cmd == 12)
+    %%%%%:  158-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  159:        {
+    #####:  160:            service.deleteReteta();
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  161:            cout<<"Reteta stearsa cu succes!\n";
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  162:            cout<<"Reteta are: "<<service.getAllReteta().size()<<" medicamente\n";
+    %%%%%:  162-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  162-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  162-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  162-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+        -:  163:        }
+    #####:  164:        else if(cmd == 13)
+    %%%%%:  164-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  165:        {
+    #####:  166:            cout<<"Introduceti numarul de medicamente dorit: ";
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  167:            int numar;
+    #####:  168:            cin>>numar;
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  169:            service.generateRandomReteta(numar);
+    %%%%%:  169-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  170:            cout<<"Reteta creata cu succes!\n";
+    %%%%%:  170-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  171:            cout<<"Reteta are: "<<service.getAllReteta().size()<<" medicamente\n";
+    %%%%%:  171-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  171-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  171-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  171-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+        -:  172:        }
+    #####:  173:        else if(cmd==14)
+    %%%%%:  173-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  174:        {
+    #####:  175:            vector<Medicament> reteta = service.getAllReteta();
+    %%%%%:  175-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  175-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  176:            for(const auto& med: reteta)
+    %%%%%:  176-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  176-block  1
+call    2 never executed
+    %%%%%:  176-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  177:                cout<<"Nume: "<< med.getNume()<<" Pret: "<<med.getPret()<<" Producator: "<< med.getProducator()<<" Substanta: "<<med.getSubstanta()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  177-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  177-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  177-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  177-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  177-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  177-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  177-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  177-block  7
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  177-block  8
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  177-block  9
+call   31 never executed
+branch 32 never executed (fallthrough)
+branch 33 never executed (throw)
+    %%%%%:  177-block 10
+call   34 never executed
+branch 35 never executed (fallthrough)
+branch 36 never executed (throw)
+    %%%%%:  177-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:  177-block 12
+call   41 never executed
+    $$$$$:  177-block 13
+    $$$$$:  177-block 14
+call   42 never executed
+    $$$$$:  177-block 15
+    $$$$$:  177-block 16
+call   43 never executed
+    $$$$$:  177-block 17
+        -:  178:
+    #####:  179:            cout<<"Reteta are: "<<reteta.size()<<" medicamente\n";
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  179-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  179-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    #####:  180:        }
+    %%%%%:  180-block  0
+call    0 never executed
+    $$$$$:  180-block  1
+call    1 never executed
+    #####:  181:        else if(cmd == 15)
+    %%%%%:  181-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  182:        {
+    #####:  183:            map<string, int> d = service.calculeaza();
+    %%%%%:  183-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  184:            for(const auto& it:d)
+    %%%%%:  184-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  184-block  1
+call    2 never executed
+    %%%%%:  184-block  2
+call    3 never executed
+    %%%%%:  184-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed (fallthrough)
+        -:  185:            {
+    #####:  186:                cout<<"Producatorul "<<it.first<<" are "<<it.second<<" medicamente\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  186-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  186-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  186-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  186-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+        -:  187:            }
+    #####:  188:        }
+    %%%%%:  188-block  0
+call    0 never executed
+    $$$$$:  188-block  1
+call    1 never executed
+    #####:  189:        else if(cmd==16)
+    %%%%%:  189-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  190:        {
+    #####:  191:            string numeFisier;
+    %%%%%:  191-block  0
+call    0 never executed
+    #####:  192:            cout<<"Numele fisierului CSV: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  193:            cin>>numeFisier;
+    %%%%%:  193-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  194:            service.exportRetetaCSV(numeFisier);
+    %%%%%:  194-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  195:            cout<<"Reteta are: "<<service.getAllReteta().size()<<" medicamente\n";
+    %%%%%:  195-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  195-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  195-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  195-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    #####:  196:        }
+    %%%%%:  196-block  0
+call    0 never executed
+    $$$$$:  196-block  1
+call    1 never executed
+    #####:  197:        else if(cmd==17)
+    %%%%%:  197-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  198:        {
+    #####:  199:            string numeFisier;
+    %%%%%:  199-block  0
+call    0 never executed
+    #####:  200:            cout<<"Numele fisierului HTML: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  201:            cin>>numeFisier;
+    %%%%%:  201-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  202:            service.exportRetetaHTML(numeFisier);
+    %%%%%:  202-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  203:            cout<<"Reteta are: "<<service.getAllReteta().size()<<" medicamente\n";
+    %%%%%:  203-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  203-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  203-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  203-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    #####:  204:        }
+    %%%%%:  204-block  0
+call    0 never executed
+    $$$$$:  204-block  1
+call    1 never executed
+    #####:  205:        else if(cmd==18)
+    %%%%%:  205-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  206:        {
+        -:  207:            try{
+    #####:  208:                service.undo();
+    %%%%%:  208-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  209:                cout<<"Undo-ul a fost realizat cu succes!\n";
+    %%%%%:  209-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  210:            }
+    =====:  211:            catch(MyException& ex){
+    $$$$$:  211-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  211-block  1
+call    2 never executed
+    =====:  212:                cout<<ex.getMesaj();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  212-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:  212-block  1
+call    6 never executed
+    $$$$$:  212-block  2
+call    7 never executed
+    $$$$$:  212-block  3
+    =====:  213:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  213-block  0
+call    3 never executed
+        -:  214:        }
+        -:  215:
+    #####:  216:    }
+    %%%%%:  216-block  0
+    #####:  217:}
+    %%%%%:  217-block  0
+        -:  218:
+        -:  219:

@@ -1,0 +1,92 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Service.h
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OOP_LAB6_7_SERVICE_H
+        -:    2:#define OOP_LAB6_7_SERVICE_H
+        -:    3:#include <string>
+        -:    4:#include <functional>
+        -:    5:#include <map>
+        -:    6:#include "Medicament.h"
+        -:    7:#include "Repository.h"
+        -:    8:#include "Validator.h"
+        -:    9:#include "Reteta.h"
+        -:   10:#include "undo.h"
+        -:   11:#include <memory>
+        -:   12:using std::unique_ptr;
+        -:   13:using std::string;
+        -:   14:using std::function;
+        -:   15:using std::map;
+        -:   16:
+        -:   17:class Service
+        -:   18:{
+        -:   19:private:
+        -:   20:    RepoAbstract& repository;
+        -:   21:    Validator& validator;
+        -:   22:
+        -:   23:    vector<unique_ptr<ActiuneUndo>> actiuniUndo;
+        -:   24:    Reteta currentReteta;
+        -:   25:
+        -:   26:
+        -:   27:public:
+function _ZN7ServiceC1ER12RepoAbstractR9Validator called 14 returned 100% blocks executed 100%
+       14:   28:    Service(RepoAbstract& repository, Validator& val) : repository{repository}, validator{val} {};
+       14:   28-block  0
+call    0 returned 14
+call    1 returned 14
+        -:   29:
+        -:   30:    Service(const Service& ot) = delete;
+        -:   31:
+        -:   32:    /*Adauga un medicament. Arunca exceptie daca nu este valid.*/
+        -:   33:    void add(string nume, int pret, string producator, string substanta);
+        -:   34:
+        -:   35:    /*Cauta un medicament in farmacie si il returneaza, arunca exceptie daca nu exista*/
+        -:   36:    const Medicament& cauta(const string& nume) const;
+        -:   37:
+        -:   38:    /*Sterge un medicament cu numele dat.*/
+        -:   39:    void deleteMed(const string& nume);
+        -:   40:
+        -:   41:    /*Returneaza un vector cu toate medicamentele*/
+        -:   42:    [[nodiscard]] const vector<Medicament>& getAll() const;
+        -:   43:
+        -:   44:    /*Modifica un medicament, arunca exceptie daca nu exista*/
+        -:   45:    void modifica(const string& nume, int pret, const string& producator, const string& substanta);
+        -:   46:
+        -:   47:
+        -:   48:    [[nodiscard]] vector<Medicament> filtrarePret(int pret) const;
+        -:   49:
+        -:   50:    [[nodiscard]] vector<Medicament> filtrareSubstanta(const string& substanta) const;
+        -:   51:
+        -:   52:    vector<Medicament> generalSort(function<bool(const Medicament&, const Medicament&)> fct) const;
+        -:   53:
+        -:   54:    void addReteta(const string& nume);
+        -:   55:
+        -:   56:    void deleteReteta();
+        -:   57:
+        -:   58:    void generateRandomReteta(int numar);
+        -:   59:
+        -:   60:    [[nodiscard]] const vector<Medicament>& getAllReteta() const;
+        -:   61:
+        -:   62:    [[nodiscard]] map<string,int> calculeaza() const;
+        -:   63:
+        -:   64:    void exportRetetaCSV(string& nume) const;
+        -:   65:
+        -:   66:    void exportRetetaHTML(string& nume) const;
+        -:   67:
+        -:   68:    void undo();
+        -:   69:
+function _ZN7ServiceD1Ev called 14 returned 100% blocks executed 100%
+       14:   70:    ~Service()=default;
+       14:   70-block  0
+call    0 returned 14
+call    1 returned 14
+        -:   71:};
+        -:   72:
+        -:   73:bool cmpNume(const Medicament& m1, const Medicament& m2);
+        -:   74:
+        -:   75:bool cmpProducator(const Medicament& m1, const Medicament& m2);
+        -:   76:
+        -:   77:bool cmpSubstantaPret(const Medicament& m1, const Medicament& m2);
+        -:   78:
+        -:   79:
+        -:   80:#endif //OOP_LAB6_7_SERVICE_H

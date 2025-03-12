@@ -1,0 +1,112 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/undo.h
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Service.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OOP_LAB6_7_UNDO_H
+        -:    2:#define OOP_LAB6_7_UNDO_H
+        -:    3:#include "Repository.h"
+        -:    4:#include "Medicament.h"
+        -:    5:
+        -:    6:class ActiuneUndo{
+        -:    7:
+        -:    8:public:
+        -:    9:    virtual void doUndo()=0;
+function _ZN11ActiuneUndoD2Ev called 60 returned 100% blocks executed 100%
+       60:   10:    virtual ~ActiuneUndo()=default;
+        -:   11:};
+        -:   12:
+        -:   13:class UndoAdauga: public ActiuneUndo{
+        -:   14:    RepoAbstract& repo;
+        -:   15:    Medicament medicament;
+        -:   16:public:
+function _ZN10UndoAdaugaC1ER12RepoAbstractRK10Medicament called 56 returned 100% blocks executed 80%
+       56:   17:    UndoAdauga(RepoAbstract& repo, const Medicament& m) : repo{repo}, medicament{m}{};
+       56:   17-block  0
+call    0 returned 56
+call    1 returned 56
+branch  2 taken 56 (fallthrough)
+branch  3 taken 0 (throw)
+       56:   17-block  1
+    $$$$$:   17-block  2
+call    4 never executed
+function _ZN10UndoAdauga6doUndoEv called 1 returned 100% blocks executed 71%
+        1:   18:    void doUndo() override{
+        1:   19:        repo.deleteMed(medicament.getNume());
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+call    6 returned 1
+    $$$$$:   19-block  3
+call    7 never executed
+        1:   20:    }
+        -:   21:};
+        -:   22:
+        -:   23:class UndoSterge: public ActiuneUndo{
+        -:   24:    RepoAbstract& repo;
+        -:   25:    Medicament medicament;
+        -:   26:public:
+function _ZN10UndoStergeC1ER12RepoAbstractRK10Medicament called 2 returned 100% blocks executed 80%
+        2:   27:    UndoSterge(RepoAbstract& repo, const Medicament& m): repo{repo}, medicament{m}{};
+        2:   27-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   27-block  1
+    $$$$$:   27-block  2
+call    4 never executed
+function _ZN10UndoSterge6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   28:    void doUndo() override{
+        1:   29:        repo.addMed(medicament);
+        1:   29-block  0
+call    0 returned 1
+        1:   30:    }
+        -:   31:};
+        -:   32:
+        -:   33:class UndoModifica: public ActiuneUndo{
+        -:   34:    RepoAbstract& repo;
+        -:   35:    Medicament medicamentBefore;
+        -:   36:    Medicament medicamentAfter;
+        -:   37:public:
+function _ZN12UndoModificaC1ER12RepoAbstractRK10MedicamentS4_ called 2 returned 100% blocks executed 62%
+        2:   38:    UndoModifica(RepoAbstract& repo, const Medicament& m1,const Medicament& m2): repo{repo},medicamentBefore{m1}, medicamentAfter{m2}{};
+        2:   38-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   38-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   38-block  2
+    $$$$$:   38-block  3
+call    7 never executed
+    $$$$$:   38-block  4
+call    8 never executed
+function _ZN12UndoModifica6doUndoEv called 1 returned 100% blocks executed 75%
+        1:   39:    void doUndo() override{
+        1:   40:        repo.deleteMed(medicamentAfter.getNume());
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   40-block  2
+call    6 returned 1
+    $$$$$:   40-block  3
+call    7 never executed
+        1:   41:        repo.addMed(medicamentBefore);
+call    0 returned 1
+        1:   42:    }
+        -:   43:};
+        -:   44:#endif //OOP_LAB6_7_UNDO_H

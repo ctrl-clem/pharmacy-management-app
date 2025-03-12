@@ -1,0 +1,49 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/main.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "UI.h"
+        -:    3:#include "Teste.h"
+        -:    4:#include "TemplateVectorDinamic.h"
+        -:    5:#include "Test.h"
+        -:    6:using std::cin;
+        -:    7:using std::cout;
+function main called 1 returned 100% blocks executed 71%
+        1:    8:int main() {
+        1:    9:    testAll();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    testAll1<MyVector<Medicament>>();
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    RepoFile repo{"date.txt"};
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   11-block  2
+call    6 returned 1
+    $$$$$:   11-block  3
+call    7 never executed
+    $$$$$:   11-block  4
+    $$$$$:   11-block  5
+        -:   12:    Validator validator;
+        1:   13:    Service service{repo,validator};
+call    0 returned 1
+        1:   14:    UI ui{service};
+call    0 returned 1
+        -:   15:
+        -:   16:    //ui.run();
+        1:   17:    return 0;
+        1:   18:}
+call    0 returned 1
+call    1 returned 1

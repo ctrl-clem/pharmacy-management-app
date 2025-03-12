@@ -1,0 +1,315 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/export.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\export.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\export.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <fstream>
+        -:    2:#include <iostream>
+        -:    3:#include "export.h"
+        -:    4:#include "Repository.h"
+function _Z9exportCSVRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorI10MedicamentSaIS7_EE called 2 returned 50% blocks executed 73%
+        2:    5:void exportCSV(string& nume, const vector<Medicament>& meds)
+        -:    6:{
+        2:    7:    std::ofstream out(nume,std::ios::trunc);
+        2:    7-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    8:    if(!out.is_open())
+        2:    8-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:    9:        throw MyException("Nu pot deschide fisierul "+nume);
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    9-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:    9-block  2
+    $$$$$:    9-block  3
+call    7 never executed
+        3:   10:    for(const auto& m:meds)
+        1:   10-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   10-block  1
+call    2 returned 2
+        3:   10-block  2
+call    3 returned 3
+branch  4 taken 2
+branch  5 taken 1 (fallthrough)
+        -:   11:    {
+        2:   12:        out<<m.getNume()<<","<<m.getPret()<<","<<m.getProducator()<<","<<m.getSubstanta()<<std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   12-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   12-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   12-block  2
+call    9 returned 2
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   12-block  3
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   12-block  4
+call   16 returned 2
+branch 17 taken 2 (fallthrough)
+branch 18 taken 0 (throw)
+        2:   12-block  5
+call   19 returned 2
+branch 20 taken 2 (fallthrough)
+branch 21 taken 0 (throw)
+        2:   12-block  6
+call   22 returned 2
+branch 23 taken 2 (fallthrough)
+branch 24 taken 0 (throw)
+        2:   12-block  7
+call   25 returned 2
+branch 26 taken 2 (fallthrough)
+branch 27 taken 0 (throw)
+        2:   12-block  8
+call   28 returned 2
+branch 29 taken 2 (fallthrough)
+branch 30 taken 0 (throw)
+        2:   12-block  9
+call   31 returned 2
+branch 32 taken 2 (fallthrough)
+branch 33 taken 0 (throw)
+        2:   12-block 10
+call   34 returned 2
+call   35 returned 2
+call   36 returned 2
+call   37 returned 2
+    $$$$$:   12-block 11
+call   38 never executed
+    $$$$$:   12-block 12
+    $$$$$:   12-block 13
+call   39 never executed
+    $$$$$:   12-block 14
+    $$$$$:   12-block 15
+call   40 never executed
+    $$$$$:   12-block 16
+        -:   13:    }
+        -:   14:
+        1:   15:    out.close();
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   16:}
+        1:   16-block  0
+call    0 returned 1
+        1:   16-block  1
+call    1 returned 1
+        -:   17:
+function _Z10exportHTMLRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorI10MedicamentSaIS7_EE called 2 returned 50% blocks executed 81%
+        2:   18:void exportHTML(string& nume, const vector<Medicament>& meds)
+        -:   19:{
+        2:   20:    std::ofstream out(nume, std::ios::trunc);
+        2:   20-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   21:    if(!out.is_open())
+        2:   21-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   22:        throw MyException("Nu pot deschide fisierul "+nume);
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   22-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+call    7 never executed
+        -:   23:
+        1:   24:    out<<"<html><body>"<<std::endl;
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25:    out<<"<table border= \"1\" style=\"width:100 % \" > "<<std::endl;
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   26:    for(const auto& m:meds)
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   26-block  1
+call    2 returned 2
+        2:   26-block  2
+call    3 returned 2
+        3:   26-block  3
+call    4 returned 3
+branch  5 taken 2
+branch  6 taken 1 (fallthrough)
+        -:   27:    {
+        2:   28:        out<<"<tr>"<<std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   28-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   29:        out<<"<td>"<<m.getNume()<<"</td>"<<std::endl;
+        2:   29-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   29-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   29-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   29-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   29-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   29-block  5
+call   15 returned 2
+    $$$$$:   29-block  6
+call   16 never executed
+    $$$$$:   29-block  7
+        2:   30:        out<<"<td>"<<m.getPret()<<"</td>"<<std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   30-block  0
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   30-block  1
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   30-block  2
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   31:        out<<"<td>"<<m.getProducator()<<"</td>"<<std::endl;
+        2:   31-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   31-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   31-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   31-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   31-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   31-block  5
+call   15 returned 2
+    $$$$$:   31-block  6
+call   16 never executed
+    $$$$$:   31-block  7
+        2:   32:        out<<"<td>"<<m.getSubstanta()<<"</td>"<<std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   32-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   32-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   32-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   32-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   32-block  4
+call   15 returned 2
+    $$$$$:   32-block  5
+call   16 never executed
+    $$$$$:   32-block  6
+        2:   33:        out<<"</tr>"<<std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   34:    }
+        -:   35:
+        1:   36:    out<<"</table>"<<std::endl;
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   37:    out<<"</body></html>"<<std::endl;
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38:    out.close();
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   39:}
+        1:   39-block  0
+call    0 returned 1
+        1:   39-block  1
+call    1 returned 1

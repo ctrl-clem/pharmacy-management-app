@@ -1,0 +1,23 @@
+# ninja log v5
+7	186	7369998303494371	CMakeFiles/OOP_lab6_7.dir/Medicament.cpp.obj	bdb06b0e758f6209
+58	1341	7369998315096279	CMakeFiles/OOP_lab6_7.dir/Validator.cpp.obj	c039794b5acee34b
+69	1349	7369998315178181	CMakeFiles/OOP_lab6_7.dir/undo.cpp.obj	ee3791ed4c8a2561
+47	1619	7369998317858234	CMakeFiles/OOP_lab6_7.dir/export.cpp.obj	7ac357db3bc81e81
+32	2456	7369998326221671	CMakeFiles/OOP_lab6_7.dir/UI.cpp.obj	e6cd54b69ae23955
+19	2100	7369998322669706	CMakeFiles/OOP_lab6_7.dir/Repository.cpp.obj	d4d2ff58ec87bb42
+39	2253	7369998324200677	CMakeFiles/OOP_lab6_7.dir/Reteta.cpp.obj	1ce9ff191f44fc38
+8	2005	7370016604561908	CMakeFiles/OOP_lab6_7.dir/main.cpp.obj	5571478c9b75c99a
+13	3442	7369998336072386	CMakeFiles/OOP_lab6_7.dir/Teste.cpp.obj	68efab5d8b3c11a0
+26	3525	7369998336894631	CMakeFiles/OOP_lab6_7.dir/Service.cpp.obj	37c792363342d411
+2006	2771	7370016611897408	OOP_lab6_7.exe	482076d5d28752c6
+13	198	7370038551656168	CMakeFiles/OOP_lab6_7.dir/Medicament.cpp.obj	bdb06b0e758f6209
+48	1289	7370038562562126	CMakeFiles/OOP_lab6_7.dir/Validator.cpp.obj	c039794b5acee34b
+86	1400	7370038563697975	CMakeFiles/OOP_lab6_7.dir/undo.cpp.obj	ee3791ed4c8a2561
+64	1549	7370038565151384	CMakeFiles/OOP_lab6_7.dir/export.cpp.obj	7ac357db3bc81e81
+24	2003	7370038569699334	CMakeFiles/OOP_lab6_7.dir/Repository.cpp.obj	d4d2ff58ec87bb42
+75	2290	7370038572573576	CMakeFiles/OOP_lab6_7.dir/Reteta.cpp.obj	1ce9ff191f44fc38
+6	2420	7370038573871175	CMakeFiles/OOP_lab6_7.dir/main.cpp.obj	5571478c9b75c99a
+39	2445	7370038574101949	CMakeFiles/OOP_lab6_7.dir/UI.cpp.obj	e6cd54b69ae23955
+19	3405	7370038583716132	CMakeFiles/OOP_lab6_7.dir/Teste.cpp.obj	68efab5d8b3c11a0
+31	3575	7370038585378410	CMakeFiles/OOP_lab6_7.dir/Service.cpp.obj	37c792363342d411
+3575	4319	7370038592399488	OOP_lab6_7.exe	482076d5d28752c6

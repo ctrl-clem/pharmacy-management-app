@@ -1,0 +1,428 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/TemplateVectorDinamic.h
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OOP_LAB6_7_TEMPLATEVECTORDINAMIC_H
+        -:    2:#define OOP_LAB6_7_TEMPLATEVECTORDINAMIC_H
+        -:    3:template <typename ElemType>
+        -:    4:class IteratorVector;
+        -:    5:
+        -:    6:template <typename ElemType>
+        -:    7:class MyVector
+        -:    8:{
+        -:    9:private:
+        -:   10:    int lungime;
+        -:   11:    int capacitate;
+        -:   12:    ElemType* elemente;
+        -:   13:
+        -:   14:    /*Face resize*/
+        -:   15:    void resize();
+        -:   16:public:
+        -:   17:    /*Constructor*/
+        -:   18:    MyVector();
+        -:   19:
+        -:   20:    /*Constructor de copiere*/
+        -:   21:    MyVector(const MyVector& other);
+        -:   22:
+        -:   23:    /*Destructor*/
+        -:   24:    ~MyVector();
+        -:   25:
+        -:   26:    /*Operator assignment
+        -:   27:     * elibereaza obiectul curent
+        -:   28:     * aloca spatiu pentru elemente si le copiaza din other in this
+        -:   29:     */
+        -:   30:    void operator=(const MyVector& other);
+        -:   31:
+        -:   32:    /*Move constructor*/
+        -:   33:    MyVector(MyVector&& other);
+        -:   34:
+        -:   35:    /*Move assignment*/
+        -:   36:    MyVector& operator=(MyVector&& other);
+        -:   37:
+        -:   38:    /*Operator de indexare*/
+        -:   39:    const ElemType& operator[](int index) const;
+        -:   40:    ElemType& operator[](int index);
+        -:   41:
+        -:   42:    /*Adaug in vector un element*/
+        -:   43:    void add(const ElemType& e);
+        -:   44:
+        -:   45:    /*Sterg elementul de pe o pozitie data*/
+        -:   46:    void erase(IteratorVector<ElemType> poz);
+        -:   47:
+        -:   48:    /*Returneaza elementul de pe pozitia data*/
+        -:   49:    ElemType& get(int poz) const;
+        -:   50:
+        -:   51:    /*Pun un element dat pe o pozitie data*/
+        -:   52:    void set(int poz, const ElemType& e);
+        -:   53:
+        -:   54:    /*Returnez lungimea vectorului*/
+        -:   55:    int size() const noexcept;
+        -:   56:
+        -:   57:
+        -:   58:    friend class IteratorVector<ElemType>;
+        -:   59:    IteratorVector<ElemType> begin() const;
+        -:   60:    IteratorVector<ElemType> end() const;
+        -:   61:
+        -:   62:};
+        -:   63:
+        -:   64:
+        -:   65:
+        -:   66:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentEC1Ev called 6 returned 100% blocks executed 100%
+       36:   67:MyVector<ElemType>::MyVector(): elemente{ new ElemType[5]}, capacitate{5},lungime{0}{}
+        6:   67-block  0
+call    0 returned 6
+       30:   67-block  1
+call    1 returned 30
+       36:   67-block  2
+branch  2 taken 30
+branch  3 taken 6 (fallthrough)
+        -:   68:
+        -:   69:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentEC1ERKS1_ called 3 returned 100% blocks executed 92%
+        3:   70:MyVector<ElemType>::MyVector(const MyVector<ElemType> &other)
+        -:   71:{
+     328*:   72:    elemente = new ElemType[other.capacitate];
+        3:   72-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   72-block  1
+    %%%%%:   72-block  2
+        3:   72-block  3
+call    2 returned 3
+      325:   72-block  4
+call    3 returned 325
+      328:   72-block  5
+branch  4 taken 325
+branch  5 taken 3 (fallthrough)
+        3:   73:    lungime = other.lungime;
+        3:   74:    capacitate = other.capacitate;
+      203:   75:    for(int i=0; i<other.lungime; i++)
+        3:   75-block  0
+      203:   75-block  1
+branch  0 taken 200
+branch  1 taken 3 (fallthrough)
+      200:   76:        elemente[i] = other.elemente[i];
+      200:   76-block  0
+call    0 returned 200
+        -:   77:
+        3:   78:}
+        -:   79:
+        -:   80:template<typename ElemType>
+        -:   81:ElemType& MyVector<ElemType>::operator[](int index)
+        -:   82:{
+        -:   83:    return elemente[index];
+        -:   84:}
+        -:   85:
+        -:   86:template<typename ElemType>
+        -:   87:const ElemType& MyVector<ElemType>::operator[](int index) const
+        -:   88:{
+        -:   89:    return elemente[index];
+        -:   90:}
+        -:   91:template<typename ElemType>
+        -:   92:void MyVector<ElemType>::erase(IteratorVector<ElemType> poz)
+        -:   93:{
+        -:   94:    int pozitie = poz.getPoz();
+        -:   95:    for(int i= pozitie;i<lungime-1;i++)
+        -:   96:        elemente[i]=elemente[i+1];
+        -:   97:    lungime--;
+        -:   98:
+        -:   99:}
+        -:  100:
+        -:  101:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentEaSERKS1_ called 1 returned 100% blocks executed 81%
+        1:  102:void MyVector<ElemType>::operator=(const MyVector<ElemType> &other)
+        -:  103:{
+        1:  104:    if(this == &other)
+        1:  104-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  105:        return ;
+    %%%%%:  105-block  0
+        6:  106:    delete[] elemente;
+        1:  106-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  106-block  1
+        6:  106-block  2
+branch  2 taken 5 (fallthrough)
+branch  3 taken 1
+        5:  106-block  3
+call    4 returned 5
+        1:  106-block  4
+call    5 returned 1
+     161*:  107:    elemente = new ElemType[other.capacitate];
+        1:  107-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  107-block  1
+    %%%%%:  107-block  2
+        1:  107-block  3
+call    2 returned 1
+      160:  107-block  4
+call    3 returned 160
+      161:  107-block  5
+branch  4 taken 160
+branch  5 taken 1 (fallthrough)
+       1*:  108:    for(int i=0; i<lungime; i++)
+        1:  108-block  0
+        1:  108-block  1
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:  109:        elemente[i] = other.elemente[i];
+    %%%%%:  109-block  0
+call    0 never executed
+        1:  110:    lungime = other.lungime;
+        1:  111:    capacitate = other.capacitate;
+        1:  112:    return ;
+        1:  112-block  0
+        -:  113:}
+        -:  114:
+        -:  115:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentED1Ev called 12 returned 100% blocks executed 100%
+       12:  116:MyVector<ElemType>::~MyVector()
+        -:  117:{
+      672:  118:    delete[] elemente;
+       12:  118-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 4
+        8:  118-block  1
+      668:  118-block  2
+branch  2 taken 660 (fallthrough)
+branch  3 taken 8
+      660:  118-block  3
+call    4 returned 660
+        8:  118-block  4
+call    5 returned 8
+       12:  119:}
+        -:  120:
+        -:  121:template<typename ElemType>
+function _ZNK8MyVectorI10MedicamentE3getEi called 2 returned 100% blocks executed 100%
+        2:  122:ElemType &MyVector<ElemType>::get(int poz) const
+        -:  123:{
+        2:  124:    return this->elemente[poz];
+        2:  124-block  0
+        -:  125:}
+        -:  126:
+        -:  127:template<typename ElemType>
+function _ZNK8MyVectorI10MedicamentE4sizeEv called 5 returned 100% blocks executed 100%
+        5:  128:int MyVector<ElemType>::size() const noexcept
+        -:  129:{
+        5:  130:    return this->lungime;
+        5:  130-block  0
+        -:  131:}
+        -:  132:
+        -:  133:template<typename ElemType>
+        -:  134:void MyVector<ElemType>::set(int poz, const ElemType &e)
+        -:  135:{
+        -:  136:    this->elemente[poz] = e;
+        -:  137:}
+        -:  138:
+        -:  139:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentEC1EOS1_ called 3 returned 100% blocks executed 100%
+        3:  140:MyVector<ElemType>::MyVector(MyVector&& other)
+        -:  141:{
+        3:  142:    elemente = other.elemente;
+        3:  143:    lungime = other.lungime;
+        3:  144:    capacitate = other.capacitate;
+        -:  145:
+        3:  146:    other.elemente = nullptr;
+        3:  147:    other.lungime = 0;
+        3:  148:    other.capacitate = 0;
+        3:  149:}
+        -:  150:
+        -:  151:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentEaSEOS1_ called 1 returned 100% blocks executed 89%
+        1:  152:MyVector<ElemType>& MyVector<ElemType>::operator=(MyVector<ElemType>&& other){
+        1:  153:    if (this == &other)
+        1:  153-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        -:  154:    {
+    #####:  155:        return *this;
+    %%%%%:  155-block  0
+        -:  156:    }
+       81:  157:    delete[] elemente;
+        1:  157-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  157-block  1
+       81:  157-block  2
+branch  2 taken 80 (fallthrough)
+branch  3 taken 1
+       80:  157-block  3
+call    4 returned 80
+        1:  157-block  4
+call    5 returned 1
+        -:  158:
+        1:  159:    elemente = other.elemente;
+        1:  160:    lungime = other.lungime;
+        1:  161:    capacitate = other.capacitate;
+        -:  162:
+        1:  163:    other.elemente = nullptr;
+        1:  164:    other.lungime = 0;
+        1:  165:    other.capacitate = 0;
+        1:  166:    return *this;
+        1:  166-block  0
+        -:  167:}
+        -:  168:
+        -:  169:
+        -:  170:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentE6resizeEv called 151 returned 100% blocks executed 95%
+      151:  171:void MyVector<ElemType>::resize()
+        -:  172:{
+      151:  173:    if(this->lungime >= this->capacitate)
+      151:  173-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 142
+        -:  174:    {
+        9:  175:        this->capacitate *= 2;
+     469*:  176:        ElemType* aux = new ElemType[this->capacitate];
+        9:  176-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  176-block  1
+    %%%%%:  176-block  2
+        9:  176-block  3
+call    2 returned 9
+      460:  176-block  4
+call    3 returned 460
+      469:  176-block  5
+branch  4 taken 460
+branch  5 taken 9 (fallthrough)
+      239:  177:        for(int i=0; i<this->lungime;i++)
+        9:  177-block  0
+      239:  177-block  1
+branch  0 taken 230
+branch  1 taken 9 (fallthrough)
+      230:  178:            aux[i]= this->elemente[i];
+      230:  178-block  0
+call    0 returned 230
+        -:  179:
+      239:  180:        delete[] elemente;
+        9:  180-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  180-block  1
+      239:  180-block  2
+branch  2 taken 230 (fallthrough)
+branch  3 taken 9
+      230:  180-block  3
+call    4 returned 230
+        9:  180-block  4
+call    5 returned 9
+        9:  181:        elemente = aux;
+        9:  181-block  0
+        -:  182:    }
+      151:  183:}
+        -:  184:
+        -:  185:template<typename ElemType>
+function _ZN8MyVectorI10MedicamentE3addERKS0_ called 151 returned 100% blocks executed 100%
+      151:  186:void MyVector<ElemType>::add(const ElemType &e)
+        -:  187:{
+      151:  188:    resize();
+      151:  188-block  0
+call    0 returned 151
+      151:  189:    this->elemente[lungime++] = e;
+call    0 returned 151
+      151:  190:}
+        -:  191:
+        -:  192:template<typename ElemType>
+function _ZNK8MyVectorI10MedicamentE5beginEv called 1 returned 100% blocks executed 100%
+        1:  193:IteratorVector<ElemType> MyVector<ElemType>::begin() const
+        -:  194:{
+        1:  195:    return IteratorVector<ElemType>(*this);
+        1:  195-block  0
+call    0 returned 1
+        -:  196:}
+        -:  197:
+        -:  198:template<typename ElemType>
+function _ZNK8MyVectorI10MedicamentE3endEv called 1 returned 100% blocks executed 100%
+        1:  199:IteratorVector<ElemType> MyVector<ElemType>::end() const
+        -:  200:{
+        1:  201:    return IteratorVector<ElemType>(*this,lungime);
+        1:  201-block  0
+call    0 returned 1
+        -:  202:}
+        -:  203:
+        -:  204:template <typename ElemType>
+        -:  205:class IteratorVector
+        -:  206:{
+        -:  207:private:
+        -:  208:    const MyVector<ElemType>& v;
+        -:  209:    int poz = 0;
+        -:  210:public:
+        -:  211:    IteratorVector(const MyVector<ElemType>& v) noexcept;
+        -:  212:    IteratorVector(const MyVector<ElemType>&v,int poz) noexcept;
+        -:  213:    bool valid() const;
+        -:  214:    ElemType& element() const;
+        -:  215:    void next();
+        -:  216:    ElemType& operator*();
+        -:  217:    IteratorVector& operator++();
+        -:  218:    bool operator==(const IteratorVector& other) noexcept;
+        -:  219:    bool operator!=(const IteratorVector& other) noexcept;
+        -:  220:    int getPoz(){return this->poz;};
+        -:  221:};
+        -:  222:
+        -:  223:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEC1ERK8MyVectorIS0_E called 1 returned 100% blocks executed 100%
+        1:  224:IteratorVector<ElemType>::IteratorVector(const MyVector<ElemType>& v) noexcept:v{ v } {}
+        -:  225:
+        -:  226:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEC1ERK8MyVectorIS0_Ei called 1 returned 100% blocks executed 100%
+        1:  227:IteratorVector<ElemType>::IteratorVector(const MyVector<ElemType>& v, int poz)noexcept : v{ v }, poz{ poz } {}
+        -:  228:
+        -:  229:template<typename ElemType>
+        -:  230:bool IteratorVector<ElemType>::valid()const {
+        -:  231:    return poz < v.lungime;
+        -:  232:}
+        -:  233:
+        -:  234:template<typename ElemType>
+function _ZNK14IteratorVectorI10MedicamentE7elementEv called 100 returned 100% blocks executed 100%
+      100:  235:ElemType& IteratorVector<ElemType>::element() const {
+      100:  236:    return v.elemente[poz];
+      100:  236-block  0
+        -:  237:}
+        -:  238:
+        -:  239:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentE4nextEv called 100 returned 100% blocks executed 100%
+      100:  240:void IteratorVector<ElemType>::next() {
+      100:  241:    poz++;
+      100:  242:}
+        -:  243:
+        -:  244:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEdeEv called 100 returned 100% blocks executed 100%
+      100:  245:ElemType& IteratorVector<ElemType>::operator*() {
+      100:  246:    return element();
+      100:  246-block  0
+call    0 returned 100
+        -:  247:}
+        -:  248:
+        -:  249:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEppEv called 100 returned 100% blocks executed 100%
+      100:  250:IteratorVector<ElemType>& IteratorVector<ElemType>::operator++() {
+      100:  251:    next();
+      100:  251-block  0
+call    0 returned 100
+      100:  252:    return *this;
+        -:  253:}
+        -:  254:
+        -:  255:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEeqERKS1_ called 101 returned 100% blocks executed 100%
+      101:  256:bool IteratorVector<ElemType>::operator==(const IteratorVector<ElemType>& other) noexcept {
+      101:  257:    return poz == other.poz;
+      101:  257-block  0
+        -:  258:}
+        -:  259:
+        -:  260:template<typename ElemType>
+function _ZN14IteratorVectorI10MedicamentEneERKS1_ called 101 returned 100% blocks executed 100%
+      101:  261:bool IteratorVector<ElemType>::operator!=(const IteratorVector<ElemType>& other)noexcept {
+      101:  262:    return !(*this == other);
+      101:  262-block  0
+call    0 returned 101
+        -:  263:    //return *this != other;
+        -:  264:}
+        -:  265:
+        -:  266:
+        -:  267:
+        -:  268:#endif //OOP_LAB6_7_TEMPLATEVECTORDINAMIC_H

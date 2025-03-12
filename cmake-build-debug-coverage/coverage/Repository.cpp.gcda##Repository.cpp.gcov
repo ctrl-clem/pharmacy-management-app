@@ -1,0 +1,520 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Repository.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Repository.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Repository.h"
+        -:    2:#include <algorithm>
+        -:    3:#include <fstream>
+        -:    4:#include <iostream>
+        -:    5:#include <sstream>
+        -:    6:
+        -:    7:using std::ifstream;
+        -:    8:using std::ofstream;
+        -:    9:using std::stringstream;
+        -:   10:using std::endl;
+        -:   11:using std::getline;
+        -:   12:
+function _ZN4Repo6addMedERK10Medicament called 72 returned 97% blocks executed 69%
+       72:   13:void Repo::addMed(const Medicament &m) {
+        -:   14:
+function _ZZN4Repo6addMedERK10MedicamentENKUlS2_E_clES2_ called 137 returned 100% blocks executed 73%
+       72:   15:    auto it = std::find_if(this->getAll().begin(),this->getAll().end(),[=](const Medicament& m1){
+       72:   15-block  0
+call    0 returned 72
+branch  1 taken 72 (fallthrough)
+branch  2 taken 0 (throw)
+       72:   15-block  1
+call    3 returned 72
+branch  4 taken 72 (fallthrough)
+branch  5 taken 0 (throw)
+       72:   15-block  2
+call    6 returned 72
+call    7 returned 72
+branch  8 taken 72 (fallthrough)
+branch  9 taken 0 (throw)
+       72:   15-block  3
+call   10 returned 72
+call   11 returned 72
+branch 12 taken 72 (fallthrough)
+branch 13 taken 0 (throw)
+       72:   15-block  4
+call   14 returned 72
+    $$$$$:   15-block  5
+call   15 never executed
+    $$$$$:   15-block  6
+      137:   16:        return m1.getNume() == m.getNume();
+      137:   16-block  0
+call    0 returned 137
+branch  1 taken 137 (fallthrough)
+branch  2 taken 0 (throw)
+      137:   16-block  1
+call    3 returned 137
+branch  4 taken 137 (fallthrough)
+branch  5 taken 0 (throw)
+      137:   16-block  2
+call    6 returned 137
+call    7 returned 137
+call    8 returned 137
+      137:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+call    9 never executed
+        -:   17:    });
+       72:   18:    if(it == this->getAll().end())
+call    0 returned 72
+branch  1 taken 72 (fallthrough)
+branch  2 taken 0 (throw)
+       72:   18-block  0
+call    3 returned 72
+call    4 returned 72
+branch  5 taken 70 (fallthrough)
+branch  6 taken 2
+    $$$$$:   18-block  1
+       70:   19:        medicamente.push_back(m);
+       70:   19-block  0
+call    0 returned 70
+branch  1 taken 70 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:    else
+        6:   21:        throw MyException("Medicament deja existent!");
+        2:   21-block  0
+call    0 returned 2
+        2:   21-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   21-block  2
+call    4 returned 2
+call    5 returned 2
+call    6 returned 2
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call    7 never executed
+        -:   22:    /*
+        -:   23:    for (const Medicament &M: this->medicamente)
+        -:   24:        if (M.getNume() == m.getNume()) {
+        -:   25:            throw MyException("Medicament deja existent!");
+        -:   26:        }
+        -:   27:    medicamente.push_back(m);
+        -:   28:     */
+       70:   29:}
+       70:   29-block  0
+        -:   30:
+function _ZN4Repo9deleteMedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 89% blocks executed 69%
+        9:   31:void Repo::deleteMed(const std::string &nume) {
+function _ZZN4Repo9deleteMedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10MedicamentE_clESA_ called 20 returned 100% blocks executed 100%
+        9:   32:    auto it = std::find_if(this->getAll().begin(),this->getAll().end(),[=](const Medicament& m1){
+        9:   32-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   32-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   32-block  2
+call    6 returned 9
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:   32-block  3
+call   10 returned 9
+call   11 returned 9
+branch 12 taken 9 (fallthrough)
+branch 13 taken 0 (throw)
+        9:   32-block  4
+call   14 returned 9
+    $$$$$:   32-block  5
+call   15 never executed
+    $$$$$:   32-block  6
+       20:   33:        return m1.getNume() == nume;
+       20:   33-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   33-block  1
+call    3 returned 20
+call    4 returned 20
+       20:   33-block  2
+        -:   34:    });
+        9:   35:    if(it == this->getAll().end())
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   35-block  0
+call    3 returned 9
+call    4 returned 9
+branch  5 taken 1 (fallthrough)
+branch  6 taken 8
+    $$$$$:   35-block  1
+        3:   36:        throw MyException("Medicamentul nu exista!");
+        1:   36-block  0
+call    0 returned 1
+        1:   36-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+call    7 never executed
+        -:   37:    else
+        8:   38:        medicamente.erase(it);
+        8:   38-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   39:
+        -:   40:    /*for (auto i = medicamente.begin(); i != medicamente.end(); ++i)
+        -:   41:        if (i->getNume() == nume) {
+        -:   42:            medicamente.erase(i);
+        -:   43:            return;
+        -:   44:        }
+        -:   45:    throw MyException("Medicamentul nu exista!");*/
+        -:   46:
+        8:   47:}
+        8:   47-block  0
+        -:   48:
+function _ZN4Repo11modificaMedERK10Medicament called 3 returned 100% blocks executed 75%
+        3:   49:void Repo::modificaMed(const Medicament &m) {
+        -:   50:    //stergem medicamentul vechi
+        3:   51:    deleteMed(m.getNume());
+        3:   51-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   51-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   51-block  2
+call    6 returned 3
+    $$$$$:   51-block  3
+call    7 never executed
+        -:   52:    //il adaugam in farmacie pe cel nou
+        3:   53:    addMed(m);
+call    0 returned 3
+        3:   54:}
+        -:   55:
+function _ZN8RepoFile12loadFromFileEv called 6 returned 83% blocks executed 69%
+        6:   56:void RepoFile::loadFromFile() {
+        6:   57:    ifstream medFile(this->fileName);
+        6:   57-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   58:    if (!medFile.is_open())
+        6:   58-block  0
+call    0 returned 6
+branch  1 taken 1 (fallthrough)
+branch  2 taken 5
+        1:   59:        throw MyException("Nu pot citi din fisierul "+ fileName);
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+call    7 never executed
+        -:   60:
+        5:   61:    string line;
+        5:   61-block  0
+call    0 returned 5
+       11:   62:    while(getline(medFile,line))
+       11:   62-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   62-block  1
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+       11:   62-block  2
+branch  6 taken 6
+branch  7 taken 5 (fallthrough)
+        -:   63:    {
+        6:   64:        string nume,producator,substanta;
+        6:   64-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        -:   65:        int pret;
+        -:   66:
+        6:   67:        stringstream linestream(line);
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   68:        string curent;
+        6:   68-block  0
+call    0 returned 6
+        6:   69:        int nr=0;
+       30:   70:        while(getline(linestream,curent,','))
+       30:   70-block  0
+call    0 returned 30
+branch  1 taken 30 (fallthrough)
+branch  2 taken 0 (throw)
+       30:   70-block  1
+call    3 returned 30
+branch  4 taken 30 (fallthrough)
+branch  5 taken 0 (throw)
+       30:   70-block  2
+branch  6 taken 24
+branch  7 taken 6 (fallthrough)
+        -:   71:        {
+       24:   72:            if(nr==0)
+       24:   72-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 18
+        6:   73:                nume=curent;
+        6:   73-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+       24:   74:            if(nr==1)
+       24:   74-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 18
+        6:   75:                pret=stoi(curent);
+        6:   75-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   75-block  1
+       24:   76:            if(nr==2)
+       24:   76-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 18
+        6:   77:                producator=curent;
+        6:   77-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+       24:   78:            if(nr==3)
+       24:   78-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 18
+        6:   79:                substanta=curent;
+        6:   79-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   80:
+       24:   81:            nr++;
+       24:   81-block  0
+        -:   82:        }
+        -:   83:
+        6:   84:        Medicament m{nume,pret,producator,substanta};
+        6:   84-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   84-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   84-block  2
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   84-block  3
+call    9 returned 6
+call   10 returned 6
+call   11 returned 6
+call   12 returned 6
+    $$$$$:   84-block  4
+    $$$$$:   84-block  5
+call   13 never executed
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+call   14 never executed
+    $$$$$:   84-block  8
+        -:   85:
+        6:   86:        Repo::addMed(m);
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   87:    }
+        6:   87-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+call    5 returned 6
+    $$$$$:   87-block  1
+call    6 never executed
+    $$$$$:   87-block  2
+call    7 never executed
+    $$$$$:   87-block  3
+call    8 never executed
+    $$$$$:   87-block  4
+call    9 never executed
+    $$$$$:   87-block  5
+call   10 never executed
+    $$$$$:   87-block  6
+call   11 never executed
+        -:   88:
+        5:   89:    medFile.close();
+        5:   89-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   90:
+        6:   91:}
+        5:   91-block  0
+call    0 returned 5
+call    1 returned 5
+    $$$$$:   91-block  1
+call    2 never executed
+        1:   91-block  2
+call    3 returned 1
+        -:   92:
+        -:   93:
+function _ZN8RepoFile10saveToFileEv called 6 returned 100% blocks executed 59%
+        6:   94:void RepoFile::saveToFile() {
+        -:   95:
+        6:   96:    ofstream medFile(this->fileName);
+        6:   96-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   97:    if(!medFile.is_open())
+        6:   97-block  0
+call    0 returned 6
+branch  1 taken 0 (fallthrough)
+branch  2 taken 6
+    #####:   98:        throw MyException("Nu pot scrie in fisierul "+ fileName);
+    %%%%%:   98-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   98-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    $$$$$:   98-block  2
+    $$$$$:   98-block  3
+call    7 never executed
+       10:   99:    for(const auto& med: getAll())
+        6:   99-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   99-block  1
+call    3 returned 6
+call    4 returned 6
+        4:   99-block  2
+call    5 returned 4
+       10:   99-block  3
+call    6 returned 10
+branch  7 taken 4
+branch  8 taken 6 (fallthrough)
+        4:  100:        medFile<<med.getNume()<<","<<med.getPret()<<","<<med.getProducator()<<","<<med.getSubstanta()<<endl;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  100-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  100-block  1
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:  100-block  2
+call    9 returned 4
+call   10 returned 4
+branch 11 taken 4 (fallthrough)
+branch 12 taken 0 (throw)
+        4:  100-block  3
+call   13 returned 4
+branch 14 taken 4 (fallthrough)
+branch 15 taken 0 (throw)
+        4:  100-block  4
+call   16 returned 4
+branch 17 taken 4 (fallthrough)
+branch 18 taken 0 (throw)
+        4:  100-block  5
+call   19 returned 4
+branch 20 taken 4 (fallthrough)
+branch 21 taken 0 (throw)
+        4:  100-block  6
+call   22 returned 4
+branch 23 taken 4 (fallthrough)
+branch 24 taken 0 (throw)
+        4:  100-block  7
+call   25 returned 4
+branch 26 taken 4 (fallthrough)
+branch 27 taken 0 (throw)
+        4:  100-block  8
+call   28 returned 4
+branch 29 taken 4 (fallthrough)
+branch 30 taken 0 (throw)
+        4:  100-block  9
+call   31 returned 4
+branch 32 taken 4 (fallthrough)
+branch 33 taken 0 (throw)
+        4:  100-block 10
+call   34 returned 4
+call   35 returned 4
+call   36 returned 4
+call   37 returned 4
+    $$$$$:  100-block 11
+call   38 never executed
+    $$$$$:  100-block 12
+    $$$$$:  100-block 13
+call   39 never executed
+    $$$$$:  100-block 14
+    $$$$$:  100-block 15
+call   40 never executed
+    $$$$$:  100-block 16
+        -:  101:
+        6:  102:    medFile.close();
+        6:  102-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  103:}
+        6:  103-block  0
+call    0 returned 6
+    $$$$$:  103-block  1
+call    1 never executed
+        -:  104:
+function _ZN8RepoFile6addMedERK10Medicament called 3 returned 100% blocks executed 100%
+        3:  105:void RepoFile::addMed(const Medicament &m) {
+        3:  106:    Repo::addMed(m);
+        3:  106-block  0
+call    0 returned 3
+        3:  107:    saveToFile();
+call    0 returned 3
+        3:  108:}
+        -:  109:
+function _ZN8RepoFile9deleteMedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 100%
+        3:  110:void RepoFile::deleteMed(const string &nume) {
+        3:  111:    Repo::deleteMed(nume);
+        3:  111-block  0
+call    0 returned 2
+        2:  112:    saveToFile();
+call    0 returned 2
+        2:  113:}
+        -:  114:
+function _ZN8RepoFile11modificaMedERK10Medicament called 1 returned 100% blocks executed 100%
+        1:  115:void RepoFile::modificaMed(const Medicament &m) {
+        1:  116:    Repo::modificaMed(m);
+        1:  116-block  0
+call    0 returned 1
+        1:  117:    saveToFile();
+call    0 returned 1
+        1:  118:}

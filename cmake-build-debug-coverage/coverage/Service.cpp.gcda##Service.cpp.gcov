@@ -1,0 +1,711 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Service.cpp
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Service.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Service.h"
+        -:    2:#include "export.h"
+        -:    3:#include <utility>
+        -:    4:#include <algorithm>
+function _ZN7Service3addENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 59 returned 95% blocks executed 79%
+       59:    5:void Service::add(std::string nume, int pret, std::string producator, std::string substanta)
+        -:    6:{
+       59:    7:    Medicament m{std::move(nume),pret,std::move(producator),std::move(substanta)};
+       59:    7-block  0
+call    0 returned 59
+call    1 returned 59
+call    2 returned 59
+call    3 returned 59
+call    4 returned 59
+call    5 returned 59
+call    6 returned 59
+call    7 returned 59
+call    8 returned 59
+call    9 returned 59
+       59:    8:    validator.valideaza(m);
+call    0 returned 59
+branch  1 taken 57 (fallthrough)
+branch  2 taken 2 (throw)
+       57:    9:    repository.addMed(m);
+       57:    9-block  0
+call    0 returned 57
+branch  1 taken 56 (fallthrough)
+branch  2 taken 1 (throw)
+       56:   10:    actiuniUndo.push_back(std::make_unique<UndoAdauga>(repository,m));
+       56:   10-block  0
+call    0 returned 56
+branch  1 taken 56 (fallthrough)
+branch  2 taken 0 (throw)
+       56:   10-block  1
+call    3 returned 56
+call    4 returned 56
+branch  5 taken 56 (fallthrough)
+branch  6 taken 0 (throw)
+       56:   10-block  2
+call    7 returned 56
+call    8 returned 56
+    $$$$$:   10-block  3
+call    9 never executed
+    $$$$$:   10-block  4
+call   10 never executed
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+       59:   11:}
+call    0 returned 56
+        3:   11-block  0
+call    1 returned 3
+        -:   12:
+function _ZNK7Service6getAllEv called 119 returned 100% blocks executed 100%
+      119:   13:const vector<Medicament>& Service::getAll() const
+        -:   14:{
+      119:   15:    return this->repository.getAll();
+      119:   15-block  0
+call    0 returned 119
+        -:   16:}
+        -:   17:
+function _ZN7Service9deleteMedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 61%
+        3:   18:void Service::deleteMed(const std::string& nume)
+        -:   19:{
+        3:   20:    Medicament m{cauta(nume).getNume(),cauta(nume).getPret(), cauta(nume).getProducator(),cauta(nume).getSubstanta()};
+        3:   20-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   20-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   20-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   20-block  3
+call    9 returned 2
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   20-block  4
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   20-block  5
+call   16 returned 2
+branch 17 taken 2 (fallthrough)
+branch 18 taken 0 (throw)
+        2:   20-block  6
+call   19 returned 2
+branch 20 taken 2 (fallthrough)
+branch 21 taken 0 (throw)
+        2:   20-block  7
+call   22 returned 2
+call   23 returned 2
+call   24 returned 2
+call   25 returned 2
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+call   26 never executed
+    $$$$$:   20-block 10
+    $$$$$:   20-block 11
+call   27 never executed
+        1:   20-block 12
+        2:   21:    repository.deleteMed(nume);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   22:    actiuniUndo.push_back(std::make_unique<UndoSterge>(repository,m));
+        2:   22-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   22-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   22-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   22-block  3
+call    9 never executed
+    $$$$$:   22-block  4
+call   10 never executed
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+        -:   23:
+        2:   24:}
+call    0 returned 2
+    $$$$$:   24-block  0
+call    1 never executed
+        -:   25:
+function _ZNK7Service5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 34 returned 88% blocks executed 70%
+       34:   26:const Medicament& Service::cauta(const string& nume) const
+        -:   27:{
+function _ZZNK7Service5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10MedicamentE_clESA_ called 67 returned 100% blocks executed 100%
+       34:   28:    auto it = std::find_if(this->getAll().begin(),this->getAll().end(),[=](const Medicament& m){
+       34:   28-block  0
+call    0 returned 34
+branch  1 taken 34 (fallthrough)
+branch  2 taken 0 (throw)
+       34:   28-block  1
+call    3 returned 34
+branch  4 taken 34 (fallthrough)
+branch  5 taken 0 (throw)
+       34:   28-block  2
+call    6 returned 34
+call    7 returned 34
+branch  8 taken 34 (fallthrough)
+branch  9 taken 0 (throw)
+       34:   28-block  3
+call   10 returned 34
+call   11 returned 34
+branch 12 taken 34 (fallthrough)
+branch 13 taken 0 (throw)
+       34:   28-block  4
+call   14 returned 34
+    $$$$$:   28-block  5
+call   15 never executed
+    $$$$$:   28-block  6
+       67:   29:        return m.getNume() == nume;
+       67:   29-block  0
+call    0 returned 67
+branch  1 taken 67 (fallthrough)
+branch  2 taken 0 (throw)
+       67:   29-block  1
+call    3 returned 67
+call    4 returned 67
+       67:   29-block  2
+        -:   30:    });
+       34:   31:    if(it!= this->getAll().end())
+call    0 returned 34
+branch  1 taken 34 (fallthrough)
+branch  2 taken 0 (throw)
+       34:   31-block  0
+call    3 returned 34
+call    4 returned 34
+branch  5 taken 30 (fallthrough)
+branch  6 taken 4
+    $$$$$:   31-block  1
+       60:   32:        return (*it);
+       30:   32-block  0
+call    0 returned 30
+       30:   32-block  1
+        -:   33:    else
+       12:   34:        throw MyException("Acest medicament nu exista!");
+        4:   34-block  0
+call    0 returned 4
+        4:   34-block  1
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   34-block  2
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+    $$$$$:   34-block  3
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+call    7 never executed
+        -:   35:    /*for(const Medicament& med : repository.getAll())
+        -:   36:    {
+        -:   37:        if(med.getNume() == nume)
+        -:   38:            return med;
+        -:   39:    }
+        -:   40:    throw string("Acest medicament nu exista!");*/
+        -:   41:}
+        -:   42:
+function _ZN7Service8modificaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 4 returned 50% blocks executed 65%
+        4:   43:void Service::modifica(const string& nume, const int pret, const string& producator, const string& substanta)
+        -:   44:{
+        4:   45:    Medicament m{cauta(nume).getNume(),cauta(nume).getPret(), cauta(nume).getProducator(),cauta(nume).getSubstanta()};
+        4:   45-block  0
+call    0 returned 4
+branch  1 taken 3 (fallthrough)
+branch  2 taken 1 (throw)
+        3:   45-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   45-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   45-block  3
+call    9 returned 3
+call   10 returned 3
+branch 11 taken 3 (fallthrough)
+branch 12 taken 0 (throw)
+        3:   45-block  4
+call   13 returned 3
+branch 14 taken 3 (fallthrough)
+branch 15 taken 0 (throw)
+        3:   45-block  5
+call   16 returned 3
+branch 17 taken 3 (fallthrough)
+branch 18 taken 0 (throw)
+        3:   45-block  6
+call   19 returned 3
+branch 20 taken 3 (fallthrough)
+branch 21 taken 0 (throw)
+        3:   45-block  7
+call   22 returned 3
+call   23 returned 3
+call   24 returned 3
+call   25 returned 3
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+call   26 never executed
+    $$$$$:   45-block 10
+    $$$$$:   45-block 11
+call   27 never executed
+        1:   45-block 12
+        3:   46:    Medicament m1 {nume,pret,producator,substanta};
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   46-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   46-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   46-block  2
+call    9 returned 3
+call   10 returned 3
+call   11 returned 3
+call   12 returned 3
+    $$$$$:   46-block  3
+    $$$$$:   46-block  4
+call   13 never executed
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+call   14 never executed
+    $$$$$:   46-block  7
+        3:   47:    validator.valideaza(m1);
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   48:    repository.modificaMed(m1);
+        2:   48-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   49:    actiuniUndo.push_back(std::make_unique<UndoModifica>(repository,m,m1));
+        2:   49-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   49-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   49-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   49-block  3
+call    9 never executed
+    $$$$$:   49-block  4
+call   10 never executed
+    $$$$$:   49-block  5
+    $$$$$:   49-block  6
+        4:   50:}
+call    0 returned 2
+call    1 returned 2
+        1:   50-block  0
+call    2 returned 1
+        1:   50-block  1
+call    3 returned 1
+        -:   51:
+function _ZNK7Service12filtrarePretEi called 1 returned 100% blocks executed 90%
+        1:   52:vector<Medicament> Service::filtrarePret(int pret) const {
+        1:   53:    vector<Medicament> rez;
+        1:   53-block  0
+call    0 returned 1
+        1:   54:    const vector<Medicament>& all = getAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+function _ZZNK7Service12filtrarePretEiENKUlRK10MedicamentE_clES2_ called 4 returned 100% blocks executed 100%
+        1:   55:    std::copy_if(all.begin(),all.end(),back_inserter(rez),[pret](const Medicament& m){
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   56:        return m.getPret() < pret;
+        4:   56-block  0
+call    0 returned 4
+        -:   57:    });
+        -:   58:
+        1:   59:    return rez;
+        1:   59-block  0
+        1:   59-block  1
+    =====:   60:}
+    $$$$$:   60-block  0
+call    0 never executed
+        -:   61:
+function _ZNK7Service17filtrareSubstantaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 73%
+        1:   62:vector<Medicament> Service::filtrareSubstanta(const string& substanta) const {
+        1:   63:    vector<Medicament> rez;
+        1:   63-block  0
+call    0 returned 1
+        1:   64:    const vector<Medicament>& all = getAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+function _ZZNK7Service17filtrareSubstantaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10MedicamentE_clESA_ called 4 returned 100% blocks executed 100%
+        1:   65:    std::copy_if(all.begin(),all.end(),back_inserter(rez),[substanta](const Medicament& m){
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   65-block  2
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   65-block  3
+call   11 returned 1
+    $$$$$:   65-block  4
+call   12 never executed
+    $$$$$:   65-block  5
+        4:   66:        return m.getSubstanta() == substanta;
+        4:   66-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   66-block  1
+call    3 returned 4
+call    4 returned 4
+        4:   66-block  2
+        -:   67:    });
+        -:   68:
+        1:   69:    return rez;
+        1:   69-block  0
+    =====:   70:}
+    $$$$$:   70-block  0
+call    0 never executed
+        -:   71:
+        -:   72:
+function _ZNK7Service11generalSortESt8functionIFbRK10MedicamentS3_EE called 3 returned 100% blocks executed 71%
+        3:   73:vector<Medicament> Service::generalSort(function<bool(const Medicament &, const Medicament &)> fct) const  {
+        3:   74:    vector<Medicament> rez = getAll();
+        3:   74-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   75:    sort(rez.begin(),rez.end(), fct);
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   75-block  0
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   75-block  1
+call    8 returned 3
+    $$$$$:   75-block  2
+call    9 never executed
+    $$$$$:   75-block  3
+        3:   76:    return rez;
+        3:   76-block  0
+    =====:   77:}
+    $$$$$:   77-block  0
+call    0 never executed
+        -:   78:
+function _ZN7Service9addRetetaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 86% blocks executed 100%
+        7:   79:void Service::addReteta(const string &nume) {
+        7:   80:    const Medicament& m=cauta(nume);
+        7:   80-block  0
+call    0 returned 7
+        7:   81:    currentReteta.addMedicamentReteta(m);
+call    0 returned 6
+        6:   82:}
+        -:   83:
+function _ZN7Service12deleteRetetaEv called 1 returned 100% blocks executed 100%
+        1:   84:void Service::deleteReteta() {
+        1:   85:    currentReteta.deleteReteta();
+        1:   85-block  0
+call    0 returned 1
+        1:   86:}
+        -:   87:
+function _ZN7Service20generateRandomRetetaEi called 2 returned 100% blocks executed 75%
+        2:   88:void Service::generateRandomReteta(int numar) {
+        2:   89:    currentReteta.generateRandom(numar,this->getAll());
+        2:   89-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   89-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   89-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   89-block  3
+call    9 returned 2
+    $$$$$:   89-block  4
+call   10 never executed
+        2:   90:}
+        -:   91:
+function _ZNK7Service12getAllRetetaEv called 8 returned 100% blocks executed 100%
+        8:   92:const vector<Medicament>& Service::getAllReteta() const {
+        8:   93:    return currentReteta.getAllReteta();
+        8:   93-block  0
+call    0 returned 8
+        -:   94:
+        -:   95:}
+        -:   96:
+function _ZNK7Service10calculeazaB5cxx11Ev called 1 returned 100% blocks executed 59%
+        1:   97:map<string, int> Service::calculeaza() const {
+        1:   98:    vector<Medicament> all = getAll();
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   98-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   99:    map<string, int> dictionar;
+        1:   99-block  0
+call    0 returned 1
+        7:  100:    for(const auto& med:all)
+call    0 returned 1
+call    1 returned 1
+        6:  100-block  0
+call    2 returned 6
+        6:  100-block  1
+call    3 returned 6
+        7:  100-block  2
+call    4 returned 7
+branch  5 taken 6
+branch  6 taken 1 (fallthrough)
+        -:  101:    {
+        6:  102:        if(dictionar.find(med.getProducator()) == dictionar.end())
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:  102-block  0
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:  102-block  1
+call    7 returned 6
+call    8 returned 6
+branch  9 taken 2 (fallthrough)
+branch 10 taken 4
+    $$$$$:  102-block  2
+call   11 never executed
+    $$$$$:  102-block  3
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+        -:  103:        {
+        2:  104:            dictionar.insert({med.getProducator(),1});
+        2:  104-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  104-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:  104-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:  104-block  3
+call    9 never executed
+    $$$$$:  104-block  4
+    $$$$$:  104-block  5
+call   10 never executed
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+    $$$$$:  104-block  8
+        -:  105:        }
+        -:  106:        else
+        4:  107:            dictionar[med.getProducator()]++;
+        4:  107-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  107-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  107-block  2
+call    6 returned 4
+    $$$$$:  107-block  3
+call    7 never executed
+    $$$$$:  107-block  4
+        -:  108:    }
+        -:  109:
+        2:  110:    return dictionar;
+        1:  110-block  0
+        1:  110-block  1
+        1:  111:}
+        1:  111-block  0
+call    0 returned 1
+    $$$$$:  111-block  1
+call    1 never executed
+    $$$$$:  111-block  2
+call    2 never executed
+        -:  112:
+function _ZNK7Service15exportRetetaCSVERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
+        2:  113:void Service::exportRetetaCSV(string &nume) const {
+        2:  114:    exportCSV(nume, getAllReteta());
+        2:  114-block  0
+call    0 returned 2
+call    1 returned 1
+        -:  115:
+        1:  116:}
+        -:  117:
+function _ZNK7Service16exportRetetaHTMLERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
+        2:  118:void Service::exportRetetaHTML(string &nume) const {
+        2:  119:    exportHTML(nume,getAllReteta());
+        2:  119-block  0
+call    0 returned 2
+call    1 returned 1
+        1:  120:}
+        -:  121:
+function _ZN7Service4undoEv called 4 returned 75% blocks executed 76%
+        4:  122:void Service::undo() {
+        4:  123:    if(actiuniUndo.empty())
+        4:  123-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        3:  124:        throw MyException("Nu mai exista operatii!\n");
+        1:  124-block  0
+call    0 returned 1
+        1:  124-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  124-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+    $$$$$:  124-block  3
+    $$$$$:  124-block  4
+    $$$$$:  124-block  5
+call    7 never executed
+        3:  125:    actiuniUndo.back()->doUndo();
+        3:  125-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:  126:    actiuniUndo.pop_back();
+call    0 returned 3
+        -:  127:
+        3:  128:}
+        -:  129:
+function _Z7cmpNumeRK10MedicamentS1_ called 8 returned 100% blocks executed 73%
+        8:  130:bool cmpNume(const Medicament& m1, const Medicament& m2) {
+        -:  131:
+        8:  132:        return m1.getNume() < m2.getNume();
+        8:  132-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  132-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  132-block  2
+call    6 returned 8
+call    7 returned 8
+call    8 returned 8
+        8:  132-block  3
+    $$$$$:  132-block  4
+    $$$$$:  132-block  5
+call    9 never executed
+        -:  133:
+        -:  134:}
+        -:  135:
+function _Z13cmpProducatorRK10MedicamentS1_ called 13 returned 100% blocks executed 73%
+       13:  136:bool cmpProducator(const Medicament& m1, const Medicament& m2) {
+        -:  137:
+       13:  138:        return m1.getProducator() < m2.getProducator();
+       13:  138-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:  138-block  1
+call    3 returned 13
+branch  4 taken 13 (fallthrough)
+branch  5 taken 0 (throw)
+       13:  138-block  2
+call    6 returned 13
+call    7 returned 13
+call    8 returned 13
+       13:  138-block  3
+    $$$$$:  138-block  4
+    $$$$$:  138-block  5
+call    9 never executed
+        -:  139:
+        -:  140:}
+        -:  141:
+function _Z16cmpSubstantaPretRK10MedicamentS1_ called 15 returned 100% blocks executed 71%
+       15:  142:bool cmpSubstantaPret(const Medicament& m1, const Medicament& m2) {
+        -:  143:
+       15:  144:        if (m1.getSubstanta() == m2.getSubstanta())
+       15:  144-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:  144-block  1
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+       15:  144-block  2
+call    6 returned 15
+call    7 returned 15
+call    8 returned 15
+branch  9 taken 7 (fallthrough)
+branch 10 taken 8
+    $$$$$:  144-block  3
+    $$$$$:  144-block  4
+call   11 never executed
+    $$$$$:  144-block  5
+call   12 never executed
+        7:  145:            return m1.getPret() < m2.getPret();
+        7:  145-block  0
+call    0 returned 7
+call    1 returned 7
+        -:  146:        else
+        8:  147:            return m1.getSubstanta() < m2.getSubstanta();
+        8:  147-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  147-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  147-block  2
+call    6 returned 8
+call    7 returned 8
+call    8 returned 8
+    $$$$$:  147-block  3
+    $$$$$:  147-block  4
+call    9 never executed
+        -:  148:
+        -:  149:}
+        -:  150:
+        -:  151:

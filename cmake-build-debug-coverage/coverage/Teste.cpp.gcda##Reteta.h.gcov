@@ -1,0 +1,33 @@
+        -:    0:Source:C:/Users/Omen/CLionProjects/OOP-lab6-7/Reteta.h
+        -:    0:Graph:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Teste.cpp.gcno
+        -:    0:Data:C:\Users\Omen\CLionProjects\OOP-lab6-7\cmake-build-debug-coverage\CMakeFiles\OOP_lab6_7.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OOP_LAB6_7_RETETA_H
+        -:    2:#define OOP_LAB6_7_RETETA_H
+        -:    3:#include <vector>
+        -:    4:#include "Medicament.h"
+        -:    5:using std::vector;
+        -:    6:class Reteta{
+        -:    7:private:
+        -:    8:    vector<Medicament> medicamenteReteta;
+        -:    9:
+        -:   10:public:
+function _ZN6RetetaC1Ev called 0 returned 0% blocks executed 0%
+    #####:   11:    Reteta()=default;
+    %%%%%:   11-block  0
+call    0 never executed
+        -:   12:
+        -:   13:    void addMedicamentReteta(const Medicament& m);
+        -:   14:
+        -:   15:    void deleteReteta();
+        -:   16:
+        -:   17:    void generateRandom(int numar, vector<Medicament> m);
+        -:   18:
+        -:   19:    [[nodiscard]] const vector<Medicament>& getAllReteta() const;
+        -:   20:
+function _ZN6RetetaD1Ev called 0 returned 0% blocks executed 0%
+    #####:   21:    ~Reteta()=default;
+    %%%%%:   21-block  0
+call    0 never executed
+        -:   22:};
+        -:   23:#endif //OOP_LAB6_7_RETETA_H
