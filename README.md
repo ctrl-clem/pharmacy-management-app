@@ -14,5 +14,7 @@ A modern Pharmacy Management System built with C++ and Qt, following layered arc
 
 
 🛠 Tech Stack
+
 C++ – Core business logic and high-performance operations
+
 Qt – Modern, cross-platform GUI framework
